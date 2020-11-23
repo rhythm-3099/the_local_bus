@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../css/components/webstats.css';
 
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 
 import accountGroup from '@iconify/icons-mdi/account-group';
 import appleIos from '@iconify/icons-mdi/apple-ios';

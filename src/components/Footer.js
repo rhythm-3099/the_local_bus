@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../css/components/footer.css';
 
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import twitterIcon from '@iconify/icons-mdi/twitter';
 import facebookIcon from '@iconify/icons-mdi/facebook';
 
@@ -12,31 +12,31 @@ const Footer = () => {
             <div className="footer-section-wrapper">
                 <div className="footer-section">
                     <h4>The Company</h4>
-                    <a>About Us</a>
-                    <a>Leadership</a>
-                    <a>Achievement / Awards</a>
-                    <a>Contact Us</a>
-                    <a>Performance</a>
-                    <a>Special Services</a>
-                    <a>Divisions</a>
-                    <a>Corporate Office</a>
+                    <a href="https://gsrtc.in/site/">About Us</a>
+                    <a href="https://gsrtc.in/site/">Leadership</a>
+                    <a href="https://gsrtc.in/site/">Achievement / Awards</a>
+                    <a href="https://gsrtc.in/site/">Contact Us</a>
+                    <a href="https://gsrtc.in/site/">Performance</a>
+                    <a href="https://gsrtc.in/site/">Special Services</a>
+                    <a href="https://gsrtc.in/site/">Divisions</a>
+                    <a href="https://gsrtc.in/site/">Corporate Office</a>
                 </div>
                 <div className="footer-section">
                     <h4>Community</h4>
-                    <a>Right To Information</a>
-                    <a>India Code</a>
-                    <a>GSRTC Direct Agents List</a>
-                    <a>GSRTC Franchise List</a>
-                    <a>Conductor Mitra POS Agents List</a>
-                    <a>Sharvan Tirth Darshan Yojna By
+                    <a href="https://gsrtc.in/site/">Right To Information</a>
+                    <a href="https://gsrtc.in/site/">India Code</a>
+                    <a href="https://gsrtc.in/site/">GSRTC Direct Agents List</a>
+                    <a href="https://gsrtc.in/site/">GSRTC Franchise List</a>
+                    <a href="https://gsrtc.in/site/">Conductor Mitra POS Agents List</a>
+                    <a href="https://gsrtc.in/site/">Sharvan Tirth Darshan Yojna By
                         Gujarat Pavitra Yatradham Vikas
                         Board, Gandhinagar
                     </a>
-                    <a>Download</a>
+                    <a href="https://gsrtc.in/site/">Download</a>
                 </div>
                 <div className="footer-section">
                     <h4>Careers</h4>
-                    <a>Recruitment</a>
+                    <a href="https://gsrtc.in/site/">Recruitment</a>
                 </div>
                 <div className="footer-section">
                     <h4>Connect With Us!</h4>
@@ -47,11 +47,11 @@ const Footer = () => {
                 </div>
             </div>
             <div className="bits-wrapper">
-                <a>Privacy Policy</a> <span className="divider">|</span> 
-                <a>FAQs</a> <span className="divider">|</span> 
-                <a>Booking Policies</a> <span className="divider">|</span> 
-                <a>Site Map</a> <span className="divider">|</span> 
-                <a>Pravasi-Helpdesk</a> 
+                <a href="https://gsrtc.in/site/">Privacy Policy</a> <span className="divider">|</span> 
+                <a href="https://gsrtc.in/site/">FAQs</a> <span className="divider">|</span> 
+                <a href="https://gsrtc.in/site/">Booking Policies</a> <span className="divider">|</span> 
+                <a href="https://gsrtc.in/site/">Site Map</a> <span className="divider">|</span> 
+                <a href="https://gsrtc.in/site/">Pravasi-Helpdesk</a> 
             </div>
             <div className="extra-info-wrapper">
                 <div>

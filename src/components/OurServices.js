@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../css/components/ourservices.css';
 
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import busAlert from '@iconify/icons-mdi/bus-alert';
 import busIcon from '@iconify/icons-mdi/bus';
 import busMarker from '@iconify/icons-mdi/bus-marker';
