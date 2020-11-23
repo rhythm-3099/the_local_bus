@@ -41,7 +41,7 @@ export default class HomeForm extends Component {
                     </div>
                     <div className="field">
                     <label><img src={To} alt="to"/></label>
-                        <input onChange={this.toChangeHandler} placeholder="to" type="text"></input>
+                        <input onChange={this.toChangeHandler} placeholder="Tgito" type="text"></input>
                     </div>
                 </div>
                 <div className="upper-wrapper">
