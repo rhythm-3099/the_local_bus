@@ -41,7 +41,7 @@ class Slider extends Component {
         const images = [Img1, Img2];
         return(
             <div className="slider">
-                <img src={images[this.state.index % 2]} alt="background image" className="slider-img"/>
+                <img src={images[this.state.index % 2]} alt="background" className="slider-img"/>
                 <div className="slider-arrows">
                     <img src={Arrow_left} alt="arrow left" className="slider-arrow left" onClick={this.arrowClickHandler}/>
                     <img src={Arrow_right} alt="arrow right" className="slider-arrow right" onClick={this.arrowClickHandler}/>
