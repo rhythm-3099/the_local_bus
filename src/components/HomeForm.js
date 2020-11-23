@@ -8,9 +8,12 @@ import To from '../static/images/to.png';
 import DateFrom from '../static/images/date_from.png';
 import DateTo from '../static/images/date_to.png';
 
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+
 export default class HomeForm extends Component {
 
-    state = {from: '', to: ''};
+    state = {from: '', to: '', onwardDate: new Date(), returnDate: null};
 
     fromChangeHandler = (e) => {
         this.setState({from: e.target.value});
@@ -18,6 +21,14 @@ export default class HomeForm extends Component {
 
     toChangeHandler = (e) => {
         this.setState({to: e.target.value});
+    }
+
+    fromDateChangeHandler = (date) => {
+        this.setState({onwardDate: date});
+    }
+
+    toDateChangeHandler = (date) => {
+        this.setState({returnDate: date});
     }
 
     render() {
@@ -35,12 +46,21 @@ export default class HomeForm extends Component {
                 </div>
                 <div className="upper-wrapper">
                     <div className="field">
-                    <label><img src={DateFrom} alt="date-from"/></label>
-                        <input placeholder="date"></input>
+                        <label><img src={DateFrom} alt="date-from"/></label>
+                        <DatePicker 
+                            selected={this.state.onwardDate} 
+                            onChange={(date) => this.fromDateChangeHandler(date)} 
+                            minDate={new Date()}
+                            placeholderText="Select the travel date"
+                        />
                     </div>
                     <div className="field">
                         <label><img src={DateTo} alt="date_to"/></label>
-                        <input placeholder="date"></input>
+                        <DatePicker 
+                            selected={this.state.returnDate}  
+                            onChange={(date) => this.toDateChangeHandler(date)} 
+                            minDate={this.state.onwardDate}
+                        />
                     </div>
                 </div>
                 <div className="upper-wrapper">

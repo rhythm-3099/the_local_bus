@@ -15,12 +15,12 @@ export default function Navbar() {
                         <NavLink to="/login" exact className="navlink" activeClassName="active-navlink">Login</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/search" exact className="navlink" activeClassName="active-navlink">about</NavLink>
+                        <NavLink to="/search" exact className="navlink" activeClassName="active-navlink">Help</NavLink>
                     </li>
                 </ul>
             </div>
             <div className="lang-option">
-                Eng/Gij
+                Eng/Guj
             </div>
         </div>
     )
