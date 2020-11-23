@@ -8,7 +8,7 @@ import busIcon from '@iconify/icons-mdi/bus';
 import busMarker from '@iconify/icons-mdi/bus-marker';
 import ticketAccount from '@iconify/icons-mdi/ticket-account';
 
-export default function OurServices() {
+const OurServices = () => {
     return (
         <div className="services">
             <h2>Our Services</h2>
@@ -33,3 +33,4 @@ export default function OurServices() {
         </div>
     )
 }
+export default OurServices;
