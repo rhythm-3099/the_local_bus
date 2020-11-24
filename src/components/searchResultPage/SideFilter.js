@@ -148,7 +148,7 @@ export default class SideFilter extends Component {
                 <div className="filter-menu-wrapper">
                 <div>
                     <h2 className="center-hor">Enhance Results</h2>
-                    <Accordion defaultExpanded>
+                    <Accordion defaultExpanded className="accordian">
                         <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"
@@ -170,7 +170,7 @@ export default class SideFilter extends Component {
                         </AccordionDetails>
                     </Accordion>
 
-                    <Accordion defaultExpanded>
+                    <Accordion defaultExpanded className="accordian">
                         <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel2a-content"
@@ -182,7 +182,6 @@ export default class SideFilter extends Component {
                             <Slider
                                 value={this.state.priceVal}
                                 onChange={this.priceChangeHandler}
-                                valueLabelDisplay="auto"
                                 min={241}
                                 max={1080}
                             />
@@ -199,7 +198,7 @@ export default class SideFilter extends Component {
                         </AccordionDetails>
                     </Accordion>
 
-                    <Accordion defaultExpanded>
+                    <Accordion defaultExpanded className="accordian">
                         <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"
@@ -218,7 +217,7 @@ export default class SideFilter extends Component {
                         </AccordionDetails>
                     </Accordion>
 
-                    <Accordion>
+                    <Accordion className="accordian">
                         <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"
@@ -259,7 +258,7 @@ export default class SideFilter extends Component {
                             </div>
                         </AccordionDetails>
                     </Accordion>
-                    <Accordion>
+                    <Accordion className="accordian">
                         <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"
@@ -289,7 +288,7 @@ export default class SideFilter extends Component {
                             </div>
                         </AccordionDetails>
                     </Accordion>
-                    <Accordion>
+                    <Accordion className="accordian">
                         <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"

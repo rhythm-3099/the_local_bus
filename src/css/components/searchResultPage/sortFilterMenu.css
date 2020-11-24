@@ -1,0 +1,25 @@
+.sort-filter {
+    width: 95%;
+    margin: 20px auto;
+}
+
+.sort-filter-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.sort-filter-option {
+    width: calc(20% - 40px);
+    background-color: #eeeeee;
+    border: 2px solid #aaaaaa;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sort-filter-option:hover {
+    background-color: #cccccc;
+}

@@ -1,9 +1,14 @@
 .filter-menu {
     width: 100%;
+    background-color: #c4c4c4;
 }
 
 .filter-menu-wrapper {
     width: 100%;
+}
+
+.filter-menu-wrapper .accordian {
+    background-color: #c4c4c4;
 }
 
 .center-hor {

@@ -4,6 +4,12 @@
     justify-content: space-between;
 }
 
+.box-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .box1, .box2 {
     height: auto;
 }
@@ -14,6 +20,12 @@
 
 .box2 {
     flex: 1;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 80px auto;
 }
 
 
