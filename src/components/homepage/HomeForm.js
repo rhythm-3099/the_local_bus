@@ -65,7 +65,7 @@ export default class HomeForm extends Component {
                 </div>
                 <div className="upper-wrapper">
                     <div className="field">
-                        <label><img src={Seat} alt="date-from"/></label>
+                        <label><img src={Seat} alt="Seat"/></label>
                         <input placeholder="Seats" type="number"></input>
                     </div>
                     

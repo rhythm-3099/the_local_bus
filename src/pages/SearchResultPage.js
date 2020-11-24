@@ -7,6 +7,7 @@ import SideFilter from '../components/searchResultPage/SideFilter';
 
 import Pagination from '@material-ui/lab/Pagination';
 import SortFilter from '../components/searchResultPage/SortFilter';
+import SearchMenu from '../components/searchResultPage/SearchMenu';
 
 
 
@@ -16,7 +17,7 @@ export default class SearchResultPage extends Component {
         return (
             <div>
                 <div className="result-content">
-                    
+                    <SearchMenu />
                     <div className="box-container">
                         <div className="box1">
                             <SideFilter className="side-filter-menu"/>

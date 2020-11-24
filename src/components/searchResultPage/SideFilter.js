@@ -15,18 +15,6 @@ import currencyInr from '@iconify/icons-mdi/currency-inr';
 
 import Slider from '@material-ui/core/Slider';
 
-
-const useStyles = makeStyles((theme) => ({
-    root: {
-        width: '100%',
-    },
-    heading: {
-        fontSize: theme.typography.pxToRem(15),
-        fontWeight: theme.typography.fontWeightRegular,
-    },
-}));
-
-
 export default class SideFilter extends Component {
 
     state = {

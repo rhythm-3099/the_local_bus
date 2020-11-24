@@ -1,7 +1,7 @@
 .result-content {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .box-container {

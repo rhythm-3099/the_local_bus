@@ -6,6 +6,7 @@ import Loginpage from './pages/Loginpage';
 import SearchResultPage from './pages/SearchResultPage';
 
 import Navbar from './components/Navbar';
+import Helppage from './pages/Helppage';
 export default class App extends Component {
     render() {
         return (
@@ -15,6 +16,7 @@ export default class App extends Component {
                     <Route path="/" exact component={Homepage}/>
                     <Route path="/login/" component={Loginpage}/>
                     <Route path="/search/" component={SearchResultPage}/>
+                    <Route path="/help/" component={Helppage} />
                 </Router>
             </div>
         )
