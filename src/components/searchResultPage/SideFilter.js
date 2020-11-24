@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
-import {Form} from 'react-bootstrap';
 
 import '../../css/components/searchResultPage/sideFilter.css';
 
-import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import currencyInr from '@iconify/icons-mdi/currency-inr';
 
 import Slider from '@material-ui/core/Slider';
