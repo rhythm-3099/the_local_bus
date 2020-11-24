@@ -1,0 +1,115 @@
+.login-option-wrapper {
+    width: 50%;
+    margin: 35px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.login-option {
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #acacac;
+    width: 100%;
+    cursor: pointer;
+}
+
+.login-option h2 {
+    color: #555555;
+}
+
+.form-wrapper {
+    margin: 0 auto;
+    width: 45%;
+}
+
+.form {
+    text-align: center;
+    position: relative;
+    background-color: #fafafa;
+    border: 8px solid #E5DCDC;
+    border-top: none;
+    border-left: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgb(145, 134, 134);
+}
+
+.icon-form {
+    width: 45px;
+    height: 45px;
+    margin-top: 20px;
+    
+}
+
+.form-field-login {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    background-color: #F6EFEF;
+    margin: 0 auto;
+    margin-bottom: 22px;
+    border-bottom: 3px solid #BC8BC4;
+}
+
+
+.login-form-input {
+    border: none;
+    flex: 1;
+    height: 33px;
+    background-color: #F6EFEF;
+}
+
+.login-field-icon {
+    margin-right: 20px;
+    margin-left: 5px;
+    height: 17px;
+    width: 17px;
+    background-color: #F6EFEF;
+    position: relative;
+    top: 2px;
+}
+
+.login-button-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.login-button, .signup-button {
+    background-color: #C29C9C;
+    text-decoration: none;
+    width: 300px;
+    height: 33px;
+    border: none;
+    border-radius: 4px;
+    padding: 20px;
+    margin-bottom: 50px;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-indicator:after {
+    content: " ";
+    position: absolute;
+    top: -27px;
+    border-top: none;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-bottom:  30px solid #fafafa;
+}
+
+.login-indicator-left:after {
+    left: 62px;
+}
+
+.login-indicator-middle:after {
+    left: 315px;
+}
+
+.login-indicator-right:after {
+    right: 62px;
+}
+

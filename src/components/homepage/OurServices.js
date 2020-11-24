@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../css/components/ourservices.css';
+import '../../css/components/homepage/ourservices.css';
 
 import { Icon } from '@iconify/react';
 import busAlert from '@iconify/icons-mdi/bus-alert';

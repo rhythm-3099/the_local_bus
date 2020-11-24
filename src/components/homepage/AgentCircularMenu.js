@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Planet } from 'react-planet';
 
-import '../css/components/circularMenu.css';
+import '../../css/components/homepage/circularMenu.css';
 
 export default class AgentCircularMenu extends Component {
     render() {
@@ -30,7 +30,7 @@ export default class AgentCircularMenu extends Component {
                     dragablePlanet
                     dragRadiusPlanet={20}
                     bounce    
-                    orbitRadius={150}
+                    orbitRadius={120}
                 >
                     <div
                         style={{

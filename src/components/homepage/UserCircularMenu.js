@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Planet } from 'react-planet';
 
-import '../css/components/circularMenu.css';
+import '../../css/components/homepage/circularMenu.css';
 
 export default class UserCircularMenu extends Component {
     render() {
@@ -26,7 +26,7 @@ export default class UserCircularMenu extends Component {
                             >User</h3>
                         </div>
                     }
-                    orbitRadius={170}
+                    orbitRadius={145}
                     autoClose
                     dragablePlanet
                     dragRadiusPlanet={20}

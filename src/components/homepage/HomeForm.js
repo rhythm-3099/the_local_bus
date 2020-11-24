@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import '../css/components/homeform.css';
+import '../../css/components/homepage/homeform.css';
 
-import Seat from '../static/images/seat.png';
-import From from '../static/images/from.png';
-import To from '../static/images/to.png';
-import DateFrom from '../static/images/date_from.png';
-import DateTo from '../static/images/date_to.png';
+import Seat from '../../static/images/seat.png';
+import From from '../../static/images/from.png';
+import To from '../../static/images/to.png';
+import DateFrom from '../../static/images/date_from.png';
+import DateTo from '../../static/images/date_to.png';
 
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -41,7 +41,7 @@ export default class HomeForm extends Component {
                     </div>
                     <div className="field">
                     <label><img src={To} alt="to"/></label>
-                        <input onChange={this.toChangeHandler} placeholder="Tgito" type="text"></input>
+                        <input onChange={this.toChangeHandler} placeholder="To" type="text"></input>
                     </div>
                 </div>
                 <div className="upper-wrapper">

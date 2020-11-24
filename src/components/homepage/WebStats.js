@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../css/components/webstats.css';
+import '../../css/components/homepage/webstats.css';
 
 import { Icon } from '@iconify/react';
 

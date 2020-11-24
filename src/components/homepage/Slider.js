@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
-import '../css/components/slider.css';
+import '../../css/components/homepage/slider.css';
 
-import Img1 from '../static/images/slider_images/slider1.jpg';
-import Img2 from '../static/images/slider_images/slider2.jpg';
+import Img1 from '../../static/images/slider_images/slider1.jpg';
+import Img2 from '../../static/images/slider_images/slider2.jpg';
 
-import Arrow_left from '../static/images/slider_images/arrow_left.png';
-import Arrow_right from '../static/images/slider_images/arrow_right.png';
+import Arrow_left from '../../static/images/slider_images/arrow_left.png';
+import Arrow_right from '../../static/images/slider_images/arrow_right.png';
 
 class Slider extends Component {
 

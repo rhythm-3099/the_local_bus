@@ -1,6 +1,6 @@
 import React from 'react';
 
-import '../css/components/footer.css';
+import '../../css/components/homepage/footer.css';
 
 import { Icon } from '@iconify/react';
 import twitterIcon from '@iconify/icons-mdi/twitter';

@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 
 import '../css/pages/homepage.css';
 
-import Slider from '../components/Slider';
-import HomeForm from '../components/HomeForm';
-import OurServices from '../components/OurServices';
-import WebStats from '../components/WebStats';
-import Footer from '../components/Footer';
-import UserCircularMenu from '../components/UserCircularMenu';
-import AgentCircularMenu from '../components/AgentCircularMenu';
+import Slider from '../components/homepage/Slider';
+import HomeForm from '../components/homepage/HomeForm';
+import OurServices from '../components/homepage/OurServices';
+import WebStats from '../components/homepage/WebStats';
+import Footer from '../components/homepage/Footer';
+import UserCircularMenu from '../components/homepage/UserCircularMenu';
+import AgentCircularMenu from '../components/homepage/AgentCircularMenu';
+
 export default class Homepage extends Component {
     render() {
         return (
