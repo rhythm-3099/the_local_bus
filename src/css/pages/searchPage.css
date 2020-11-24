@@ -1,0 +1,20 @@
+.result-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box1, .box2 {
+    height: auto;
+}
+
+.box1 {
+    width: 25%;
+}
+
+.box2 {
+    flex: 1;
+}
+
+
+

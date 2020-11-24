@@ -1,0 +1,90 @@
+.filter-menu {
+    width: 100%;
+}
+
+.filter-menu-wrapper {
+    width: 100%;
+}
+
+.center-hor {
+    text-align: center;
+}
+
+.filter-param {
+    margin: 20px 0px;
+}
+
+.filter-param h4 {
+    margin: 0;
+    margin-left: 16px;
+}
+
+.param-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.priceLabels, .departureDateLabels {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.priceLabel-item, .departureDateLabel-item {
+    display: flex;
+}
+
+.param-inr {
+    position: relative;
+    top: 22px;
+}
+
+.radio-element-wrapper, .radio-element-wrapper-amen {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-element {
+    margin: 4px 20px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.radio-element input , .radio-element-amen input{
+    margin-right: 25px;
+}
+
+.radio-element label:hover, .radio-element-amen label:hover {
+    cursor: pointer;
+}
+
+.radio-element:hover, .radio-element-amen:hover {
+    background-color: #acacac;
+}
+
+.radio-element-amen {
+    margin: 2px 20px;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.radio-element-wrapper-amen {
+    height: 200px;
+    overflow-y: scroll;
+}
+
+/* width */
+.radio-element-wrapper-amen::-webkit-scrollbar {
+    width: 10px;
+}
+
+.radio-element-wrapper-amen::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+.radio-element-wrapper-amen::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+  /* Handle on hover */
+.radio-element-wrapper-amen::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

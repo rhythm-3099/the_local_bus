@@ -1,0 +1,151 @@
+.bus-card {
+    margin: 20px 0px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #acacac;
+}
+
+.bus-card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.star-button {
+    display: flex;
+    width: 50px;
+    background-color: coral;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.star-button h4 {
+    margin: 0;
+}
+
+.bus-card-section {
+    display: flex;
+    flex-direction: column;
+    height: 120px;
+    justify-content: space-between;
+}
+
+.bus-card-subsection h3, .bus-card-subsection h4, .bus-card-section h3, .bus-card-section h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.bus-card-subsection {
+    display: flex;
+    align-items: center;
+}
+
+.vertical-line {
+    background-color: black;
+    width: 2px;
+    height: 80px;
+    position: relative;
+    left: 7px;
+}
+
+.bus-time {
+    position: relative;
+    left: 10px;
+    z-index: 10;
+}
+
+.bus-card-subsection-ver {
+    display: flex;
+    flex-direction: column;
+}
+
+.bus-price {
+    position: relative;
+    top: -4px;
+}
+
+.view-seats-button {
+    height: 35px;
+    width: 120px;
+    background-color: cornflowerblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.bus-card-bottom-info {
+    margin-top: 10px;
+    width: 55%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.view-seats-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.view-seats-wrapper h5 {
+    margin: 5px;
+}
+
+.amenities-wrapper {
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    z-index: 100;
+}
+
+.arrow-down-amen {
+    position: relative;
+    margin-left: 5px;
+    top: 21px;
+}
+
+.amenities-wrapper:hover .amenities-container {
+    display: flex;
+}
+
+.amenities-container {
+    padding: 10px;
+    position: absolute;
+    background-color: #ececec;
+    top: 50px;
+    display: none;
+    justify-content: space-evenly;
+    border-radius: 4px;
+}
+
+.amenities-section {
+    display: flex;
+    flex-direction: column;
+    margin-right: 35px;
+}
+
+.amenities-container:after {
+    content: " ";
+    position: absolute;
+    top: -7px;
+    left: 30px;
+    border-top: none;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-bottom: 7px solid #ececec;
+}
+
+.amenity {
+    display: flex;
+    margin-bottom: 20px;
+    width: 150px;
+}
+
+.amenity h5 {
+    margin: 0;
+    margin-left: 5x;
+}
+
