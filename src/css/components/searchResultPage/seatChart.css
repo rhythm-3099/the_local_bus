@@ -1,0 +1,184 @@
+.seat-chart {
+    width: 100%;
+    background-color: violet!important;
+    height: 150vh;
+}
+
+.seat-chart-wrapper {
+    display: flex;
+    width: 98%;
+    margin: 0 auto;
+    z-index: 1000;
+}
+
+.bb1 {
+    width: 50%;
+    height: 100vh;
+    background-color: cyan;
+}
+
+.bb2 {
+    flex: 1;
+    background-color: teal;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hor-section-seat-chart {
+    display: flex;
+    width: 90%;
+    margin: 5px auto;
+    background-color: tomato;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hor-section-seat-chart p {
+    margin: 0;
+    margin-top: 8px;
+}
+
+.hor-div-line {
+    width: 95%;
+    background-color: #acacac;
+    height: 2px;
+    margin: 30px auto;
+}
+
+.seat-continue-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 200px;
+    background-color: wheat;
+    margin: 10px auto;
+    border-radius: 4px;
+}
+
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    background-color: thistle;
+    z-index: 100;
+}
+
+.dropdown-button {
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdown-button:hover {
+    background-color: #dddddd;
+    cursor: pointer;
+}
+
+.dropdown-icon {
+    position: relative;
+    top: 5px;
+    margin-left: 10px;
+    z-index: 10;
+}
+
+.dropdown-item {
+    padding: 5px;
+    padding-left: 15px;
+}
+
+.dropdown-item:hover {
+    background-color: #ececec;
+}
+
+.bb1 h2 {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+/* Bus Deck css */
+
+.lower-deck-container {
+    width: 90%;
+    background-color: white;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.lower-deck-front, .lower-deck-rear {
+    width: 26px;
+    height: 100%;
+    background-color: yellowgreen;
+}
+
+.lower-deck-main {
+    flex: 1;    
+    background-color: gray;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.lower-upper-deck {
+    display: flex;
+    flex-direction: column;
+}
+
+.lower-deck-row {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5px;
+    align-items: center;
+}
+
+.steer-icon {
+    height: 26px;
+    width: 26px;
+}
+
+.hidden-steer {
+    visibility: hidden;
+}
+
+.lower-deck-icon {
+    height: 30px;
+    width: 30px;
+}
+
+.lower-deck-icon:hover {
+    cursor: pointer;
+}
+
+.seat-legend {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: greenyellow;
+    margin-top: 20px;
+}
+
+.seat-legend-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.seat-legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.seat-legend-item h4 {
+    margin: 0;
+}
+
+.seat-legend-icon {
+    margin-right: 5px;
+}
+
