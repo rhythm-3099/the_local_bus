@@ -1,0 +1,73 @@
+.personal-info-card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding: 10px;  
+    background-color: #e0e0e0;
+    width: 98%;
+    border-radius: 4px;
+    border-bottom: 1px solid #acacac;
+}
+
+.personal-name-seat {
+    display: flex;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.personal-name-seat h4 {
+    margin: 0;
+}
+
+.info-card-ver-div {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+.personal-info-form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.personal-text-form {
+    margin-right: 20px;
+}
+
+.personal-text-field {
+    margin: 15px 0px;
+}
+
+.personal-text-field input {
+    border: none;
+    background-color: #c4c4c4;
+    width: 280px;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.personal-info-form h4 {
+    margin: 0;
+}
+
+.personal-gender-form h4{
+    margin-bottom: 20px;
+}
+
+.gender-buttons {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+}
+
+.personal-info-list-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.personal-info-list-wrapper h2 {
+    margin-left: 50px;
+}

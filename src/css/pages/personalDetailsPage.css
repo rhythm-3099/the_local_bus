@@ -1,0 +1,21 @@
+.personal-details-page-container {
+    display: flex;
+}
+
+.personal-container-1 {
+    width: 71%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.personal-container-2 {
+    flex: 1;
+}
+
+.personal-info-list {
+    margin: 0 auto;
+}
+
+.personal-contact-list {
+    margin: 0 auto;
+}

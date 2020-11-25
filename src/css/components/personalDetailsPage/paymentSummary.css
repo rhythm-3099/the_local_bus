@@ -1,0 +1,92 @@
+.payment-summary {
+    width: 98%;
+    background-color: #e0e0e0;
+    height: 80vh;
+    margin: 0 auto;
+}
+
+.payment-summary-wrapper {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.payment-summary-component, .payment-summary-component-price-conponent {
+    /* width: 90%; */
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.payment-summary-component h4, .payment-summary-component p {
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+.payment-summary-component .icon-payment {
+    height: 45px;
+    width: 45px;
+}
+
+.payment-summary-div-hor {
+    width: 90%;
+    height: 2px;
+    background-color: #aaaaaa;
+    margin: 10px auto;
+}
+
+.payment-summary-subcomponent {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    position: relative;
+}
+
+.payment-places-wrapper {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.payment-summary-vert-line {
+    position: absolute;
+    height: 40px;
+    width: 2px;
+    left: 75px;
+    top: 50px;
+    background-color: black;
+    
+}
+
+.payment-summary-vert {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+
+}
+
+.payment-summary-vert-new {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-summary-vert h4 {
+    margin-left: 16px;
+}
+
+.payment-summary-component-price-component {
+    justify-content: space-between;
+}
+
+.centering {
+    margin: 0 auto;
+}
+
+.fare-title {
+    text-align: center;
+}

@@ -13,7 +13,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 export default class HomeForm extends Component {
 
-    state = {from: '', to: '', onwardDate: new Date(), returnDate: null};
+    state = {from: '', to: '', onwardDate: new Date(), returnDate: null, seats: 0};
 
     fromChangeHandler = (e) => {
         this.setState({from: e.target.value});
@@ -66,7 +66,7 @@ export default class HomeForm extends Component {
                 <div className="upper-wrapper">
                     <div className="field">
                         <label><img src={Seat} alt="Seat"/></label>
-                        <input placeholder="Seats" type="number"></input>
+                        <input placeholder="Seats" type="number" min="1"></input>
                     </div>
                     
                     <div className="booking_buttons">

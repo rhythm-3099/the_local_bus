@@ -7,6 +7,7 @@ import SearchResultPage from './pages/SearchResultPage';
 
 import Navbar from './components/Navbar';
 import Helppage from './pages/Helppage';
+import PersonalDetailsPage from './pages/PersonalDetailsPage';
 export default class App extends Component {
     render() {
         return (
@@ -17,6 +18,7 @@ export default class App extends Component {
                     <Route path="/login/" component={Loginpage}/>
                     <Route path="/search/" component={SearchResultPage}/>
                     <Route path="/help/" component={Helppage} />
+                    <Route path="/details/" component={PersonalDetailsPage} />
                 </Router>
             </div>
         )
