@@ -22,7 +22,7 @@ export default class Seat extends Component {
     };
 
     ladiesStyle = {
-        color: '#E3FF37'
+        color: '#F964C6'
     };
 
     getSeatStyle = () => {

@@ -8,6 +8,7 @@ import { Icon } from '@iconify/react';
 import arrowDownDropCircleOutline from '@iconify/icons-mdi/arrow-down-drop-circle-outline';
 import seatPassenger from '@iconify/icons-mdi/seat-passenger';
 import steeringIcon from '@iconify/icons-mdi/steering';
+import bedIcon from '@iconify/icons-mdi/bed';
 
 import Seat from './Seat';
 import SeatUpper from './SeatUpper';
@@ -171,37 +172,37 @@ export default class SeatChart extends Component {
                         <div className="seat-legend">
                             <div className="seat-legend-row">
                                 <div className="seat-legend-item">
-                                    <Icon icon={seatPassenger} style={{color: '#000000'}} hFlip={true} className="seat-legend-icon"/>
+                                    <Icon icon={seatPassenger} style={{color: '#acacac'}} hFlip={true} className="seat-legend-icon"/>
                                     <h4>Available Seat</h4>
                                 </div>
                                 <div className="seat-legend-item">
-                                    <Icon icon={seatPassenger} style={{color: '#000000'}} hFlip={true} className="seat-legend-icon"/>
+                                    <Icon icon={seatPassenger} style={{color: '#42FF49'}} hFlip={true} className="seat-legend-icon"/>
                                     <h4>Selected Seat</h4>
                                 </div>
                                 <div className="seat-legend-item">
-                                    <Icon icon={seatPassenger} style={{color: '#000000'}} hFlip={true} className="seat-legend-icon"/>
+                                    <Icon icon={seatPassenger} style={{color: '#2BA6FF'}} hFlip={true} className="seat-legend-icon"/>
                                     <h4>Booked Seat</h4>
                                 </div>
                                 <div className="seat-legend-item">
-                                    <Icon icon={seatPassenger} style={{color: '#000000'}} hFlip={true} className="seat-legend-icon"/>
+                                    <Icon icon={seatPassenger} style={{color: '#F964C6'}} hFlip={true} className="seat-legend-icon"/>
                                     <h4>Ladies Seat</h4>
                                 </div>
                             </div>
                             <div className="seat-legend-row">
                                 <div className="seat-legend-item">
-                                    <Icon icon={seatPassenger} style={{color: '#000000'}} hFlip={true} className="seat-legend-icon"/>
+                                    <Icon icon={bedIcon} style={{color: '#acacac'}} hFlip={true} className="seat-legend-icon"/>
                                     <h4>Available Berth</h4>
                                 </div>
                                 <div className="seat-legend-item">
-                                    <Icon icon={seatPassenger} style={{color: '#000000'}} hFlip={true} className="seat-legend-icon"/>
+                                    <Icon icon={bedIcon} style={{color: '#42FF49'}} hFlip={true} className="seat-legend-icon"/>
                                     <h4>Selected Berth</h4>
                                 </div>
                                 <div className="seat-legend-item">
-                                    <Icon icon={seatPassenger} style={{color: '#000000'}} hFlip={true} className="seat-legend-icon"/>
+                                    <Icon icon={bedIcon} style={{color: '#2BA6FF'}} hFlip={true} className="seat-legend-icon"/>
                                     <h4>Booked Berth</h4>
                                 </div>
                                 <div className="seat-legend-item">
-                                    <Icon icon={seatPassenger} style={{color: '#000000'}} hFlip={true} className="seat-legend-icon"/>
+                                    <Icon icon={bedIcon} style={{color: '#F964C6'}} hFlip={true} className="seat-legend-icon"/>
                                     <h4>Ladies Berth</h4>
                                 </div>
                             </div>

@@ -23,6 +23,7 @@ import foodIcon from '@iconify/icons-mdi/food';
 import waterIcon from '@iconify/icons-mdi/water';
 import speedometerIcon from '@iconify/icons-mdi/speedometer';
 import SeatChart from '../searchResultPage/SeatChart';
+import Pillow from '../../static/images/pillow.png'
 
 
 class BusOptionCard extends Component {
@@ -119,7 +120,7 @@ class BusOptionCard extends Component {
                 <div className="bus-card-bottom-info">
                     <p>[via- Baroda Amdavad Gandhidham Bhuj]</p>
                     <div className="amenities-wrapper">
-                        <h5>Ameneties</h5>
+                        <h5 className="amen-head">Ameneties</h5>
                         <Icon icon={arrowDown} style={{color: '#000000'}} className="arrow-down-amen"/>
                         <div className="amenities-container">
                             <div className="amenities-section">
@@ -172,7 +173,8 @@ class BusOptionCard extends Component {
                                     <h5>Newspaper</h5>
                                 </div>
                                 <div className="amenity">
-                                    <Icon icon={mapMarker} style={{color: '#000000'}} />
+                                    {/* <Icon icon={mapMarker} style={{color: '#000000'}} /> */}
+                                    <img src={Pillow} alt="pillow" className="pillow-icon"/>
                                     <h5>Pillow</h5>
                                 </div>
                                 <div className="amenity">

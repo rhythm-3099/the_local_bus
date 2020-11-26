@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 
+import '../../css/components/searchResultPage/seat.css';
+
+
 import { Icon } from '@iconify/react';
 import seatPassenger from '@iconify/icons-mdi/seat-passenger';
+import bedIcon from '@iconify/icons-mdi/bed';
 
 export default class SeatUpper extends Component {
 
@@ -56,10 +60,11 @@ export default class SeatUpper extends Component {
         return (
             <div>
                 <Icon 
-                    icon={seatPassenger} 
+                    icon={bedIcon} 
                     style={this.getSeatStyle()} 
                     hFlip={true}
-                    onClick={this.onClickHandler}    
+                    onClick={this.onClickHandler}   
+                    className="seat"
                 />
             </div>
         )
