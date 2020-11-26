@@ -31,6 +31,11 @@ export default class HomeForm extends Component {
         this.setState({returnDate: date});
     }
 
+    searchButtonCLickHandler = (e) => {
+        e.preventDefault();
+        this.props.searchButtonClicked();
+    }
+
     render() {
         return (
             <form className="home-form">
@@ -81,7 +86,7 @@ export default class HomeForm extends Component {
                     </div>            
                 </div>
                 <div className="upper-wrapper">
-                    <div className="home-search-button">Search</div>
+                    <div className="home-search-button" onClick={this.searchButtonCLickHandler}>Search</div>
                 </div>
                 
             </form>

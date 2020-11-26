@@ -33,6 +33,10 @@ class BusOptionCard extends Component {
         this.setState({viewBusEnable: !this.state.viewBusEnable})
     }
 
+    mouseLeftHandler = () => {
+        this.setState({viewBusEnable: false});
+    }
+
     getSeatChart = () => {
         let seatChart = null;
         if(this.state.viewBusEnable) {
@@ -42,9 +46,11 @@ class BusOptionCard extends Component {
     }
 
 
+
+
     render() {
         return (
-            <div className="bus-card">
+            <div className="bus-card" onMouseLeave={this.mouseLeftHandler}>
                 <div className="bus-card-wrapper">
                     <div className="bus-card-section">
                         <h3>1900SRTNKTACSLP</h3>
@@ -100,7 +106,9 @@ class BusOptionCard extends Component {
                             <span className="bus-price">390</span>
                         </h2>
                         <div className="view-seats-wrapper">
-                            <div className="view-seats-button" onClick={this.viewBusClickHandler}>
+                            <div className="view-seats-button" 
+                                onClick={this.viewBusClickHandler}
+                            >
                                 View Seats
                             </div>
                             <h5>15 seats available</h5>

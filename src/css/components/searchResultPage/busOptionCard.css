@@ -75,6 +75,7 @@
     align-items: center;
     font-size: 16px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .bus-card-bottom-info {

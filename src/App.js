@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import Helppage from './pages/Helppage';
 import PersonalDetailsPage from './pages/PersonalDetailsPage';
 import FinalPage from './pages/FinalPage';
+import PaymentGateway from './pages/PaymentGateway';
 export default class App extends Component {
     render() {
         return (
@@ -21,6 +22,7 @@ export default class App extends Component {
                     <Route path="/help/" component={Helppage} />
                     <Route path="/details/" component={PersonalDetailsPage} />
                     <Route path="/final/" component={FinalPage} />
+                    <Route path="/payment/" component={PaymentGateway} />
                 </Router>
             </div>
         )

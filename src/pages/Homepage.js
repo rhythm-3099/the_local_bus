@@ -11,6 +11,12 @@ import UserCircularMenu from '../components/homepage/UserCircularMenu';
 import AgentCircularMenu from '../components/homepage/AgentCircularMenu';
 
 export default class Homepage extends Component {
+
+    searchButtonClicked = () => {
+        this.props.history.push('/search')
+    }
+
+
     render() {
         return (
             <div className="homepage">
@@ -24,7 +30,7 @@ export default class Homepage extends Component {
                         alignItems: 'center'
                     }}
                 >
-                    <HomeForm className="home-form"/>
+                    <HomeForm className="home-form" searchButtonClicked={this.searchButtonClicked}/>
                     <UserCircularMenu />
                     <AgentCircularMenu />
                 </div>

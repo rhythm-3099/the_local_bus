@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import '../../css/components/searchResultPage/seatChart.css';
 
@@ -23,6 +24,11 @@ export default class SeatChart extends Component {
         this.setState({droppingPoint: newDroppingPoint});
     }
 
+    // onContinueClickHandler = (e) => {
+    //     const history = useHistory();
+    //     history.push('/details');
+    // }
+
     render() {
         return (
             <div className="seat-chart">
@@ -31,7 +37,7 @@ export default class SeatChart extends Component {
                         <h2>Lower Deck</h2>
                         <div className="lower-deck-container">
                             <div className="lower-deck-front">
-                                F
+                                FRONT
                             </div>
                             <div className="lower-deck-main">
                                 <div className="lower-upper-deck">
@@ -92,13 +98,13 @@ export default class SeatChart extends Component {
                                 </div>
                             </div>
                             <div className="lower-deck-rear">
-                                R
+                                REAR
                             </div>
                         </div>
                         <h2>Upper Deck</h2>
                         <div className="lower-deck-container">
                             <div className="lower-deck-front">
-                                F
+                                FRONT
                             </div>
                             <div className="lower-deck-main">
                                 <div className="lower-upper-deck">
@@ -159,7 +165,7 @@ export default class SeatChart extends Component {
                                 </div>
                             </div>
                             <div className="lower-deck-rear">
-                                R
+                                REAR
                             </div>
                         </div>
                         <div className="seat-legend">
@@ -248,9 +254,12 @@ export default class SeatChart extends Component {
                             </div>
                         </div>
                         <div className="hor-div-line"></div>
-                        <div className="seat-continue-button">
+                        {/* <div className="seat-continue-button" onClick={this.onContinueClickHandler}>
                             Continue
-                        </div>
+                        </div> */}
+                        <Link to="/details" className="seat-continue-button">
+                            Continue
+                        </Link>
                     </div>
                 </div>
             </div>

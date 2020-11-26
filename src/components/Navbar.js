@@ -9,23 +9,22 @@ export default function Navbar() {
     return (
         <div className="navbar">
             <div className="navlink-container">
-                <img src={logo} alt="logo"/>
+                <NavLink to="/">
+                    <img src={logo} alt="logo"/>
+                </NavLink>
                 <ul>
                     <li>
                         <NavLink to="/login" exact className="navlink" activeClassName="active-navlink">Login</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/search" exact className="navlink" activeClassName="active-navlink">Search</NavLink>
-                    </li>
-                    <li>
                         <NavLink to="/help" exact className="navlink" activeClassName="active-navlink">Help</NavLink>
                     </li>
-                    <li>
-                        <NavLink to="/details" exact className="navlink" activeClassName="active-navlink">Details</NavLink>
+                    {/* <li>
+                        <NavLink to="/payment" exact className="navlink" activeClassName="active-navlink">Gateway</NavLink>
                     </li>
                     <li>
                         <NavLink to="/final" exact className="navlink" activeClassName="active-navlink">Final</NavLink>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
             <div className="lang-option">

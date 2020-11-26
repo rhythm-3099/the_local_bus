@@ -8,12 +8,28 @@ import atIcon from '@iconify/icons-mdi/at';
 import {Form, Button} from 'react-bootstrap';
 
 export default class ContactDetails extends Component {
+
+    onFormSubmit = (e) => {
+        e.preventDefault();
+        this.props.buttonClick();
+    }
+
+    navAway = () => {
+        this.props.buttonClick();
+    }
+
+    buttonClick = (e) => {
+        e.preventDefault();
+        this.navAway();
+    }
+
+
     render() {
         return (
             <div className="contact-details">
                 <h2>Contact Details</h2>
                 <div className="contact-details-wrapper">
-                    <Form className="contact-form">
+                    <Form className="contact-form" className={this.onFormSubmit}>
                         <div className="contact-form-wrapper">
                             <Form.Group controlId="formBasicEmail" className="contact-form-field">
                                 <Form.Label>
@@ -30,7 +46,7 @@ export default class ContactDetails extends Component {
                                     <Form.Control type="" placeholder="Contact Number" className="contact-form-input" type="number"/>
                             </Form.Group>
                         </div>
-                        <Button variant="primary" type="submit" className="contact-button">
+                        <Button variant="primary" type="submit" className="contact-button" onClick={this.buttonClick}>
                             Continue
                         </Button>
                     </Form>

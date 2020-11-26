@@ -1,0 +1,73 @@
+.personal-info-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.personal-info-det {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.passenger-info-box {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    background-color: grey;
+    width: 80%;
+}
+
+.passenger-info-box h4 {
+    margin: 10px;
+}
+
+.passenger h4 {
+    margin-left: 50px;
+}
+
+.div-line-info {
+    width: 90%;
+    height: 2px;
+    background-color: #ececec;
+    margin: 10px auto;
+}
+
+.passenger-info-box-hor {
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+    background-color: #ececec;
+    border-radius: 4px;
+}
+
+.payment-option-list {
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: #ececec;
+    padding: 10px 10px;
+}
+
+.payment-option-list li {
+    display: inline;
+    text-align: left;
+    padding: 5px;
+    height: 35px;
+    background-color: #ececec;
+}
+
+.payment-option-list li:hover {
+    background-color: #acacac;
+    cursor: pointer;
+}
+
+.payment-info-box-pay {
+    background-color: #ececec;
+}
+
+.no-cent {
+    text-align: unset;
+}

@@ -1,7 +1,6 @@
 .seat-chart {
     width: 100%;
-    background-color: violet!important;
-    height: 150vh;
+    background-color: #ececec;
 }
 
 .seat-chart-wrapper {
@@ -9,18 +8,15 @@
     width: 98%;
     margin: 0 auto;
     z-index: 1000;
+    align-items: center;
 }
 
 .bb1 {
     width: 50%;
-    height: 100vh;
-    background-color: cyan;
 }
 
 .bb2 {
     flex: 1;
-    background-color: teal;
-    height: 50vh;
     display: flex;
     flex-direction: column;
 }
@@ -29,7 +25,6 @@
     display: flex;
     width: 90%;
     margin: 5px auto;
-    background-color: tomato;
     justify-content: space-between;
     align-items: center;
 }
@@ -55,6 +50,7 @@
     background-color: wheat;
     margin: 10px auto;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .dropdown-menu {
@@ -111,9 +107,10 @@
 }
 
 .lower-deck-front, .lower-deck-rear {
-    width: 26px;
-    height: 100%;
-    background-color: yellowgreen;
+    height: 20px;
+    position: relative;
+    top: 55%;
+    left: 10px;
 }
 
 .lower-deck-main {
@@ -158,9 +155,9 @@
 .seat-legend {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 90%;
     background-color: greenyellow;
-    margin-top: 20px;
+    margin: 20px auto;
 }
 
 .seat-legend-row {
@@ -182,3 +179,7 @@
     margin-right: 5px;
 }
 
+.lower-deck-front , .lower-deck-rear {
+    transform: rotate(-90deg);
+    transform-origin: left top 0;
+}
