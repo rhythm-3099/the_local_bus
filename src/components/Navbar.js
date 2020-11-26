@@ -23,6 +23,9 @@ export default function Navbar() {
                     <li>
                         <NavLink to="/details" exact className="navlink" activeClassName="active-navlink">Details</NavLink>
                     </li>
+                    <li>
+                        <NavLink to="/final" exact className="navlink" activeClassName="active-navlink">Final</NavLink>
+                    </li>
                 </ul>
             </div>
             <div className="lang-option">
