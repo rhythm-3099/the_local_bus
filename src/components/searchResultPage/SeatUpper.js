@@ -4,7 +4,6 @@ import '../../css/components/searchResultPage/seat.css';
 
 
 import { Icon } from '@iconify/react';
-import seatPassenger from '@iconify/icons-mdi/seat-passenger';
 import bedIcon from '@iconify/icons-mdi/bed';
 
 export default class SeatUpper extends Component {
