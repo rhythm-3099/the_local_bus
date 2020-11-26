@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import '../../css/components/personalDetailsPage/paymentSummary.css';
 
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import busIcon from '@iconify/icons-mdi/bus';
 import mapMarkerRadius from '@iconify/icons-mdi/map-marker-radius';
 

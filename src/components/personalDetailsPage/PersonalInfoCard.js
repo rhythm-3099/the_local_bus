@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import '../../css/components/personalDetailsPage/personalInfoCard.css';
 
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import accountIcon from '@iconify/icons-mdi/account';
 
 export default class PersonalInfoCard extends Component {

@@ -29,7 +29,7 @@ export default class ContactDetails extends Component {
             <div className="contact-details">
                 <h2>Contact Details</h2>
                 <div className="contact-details-wrapper">
-                    <Form className="contact-form" className={this.onFormSubmit}>
+                    <Form className="contact-form" onSubmit={this.onFormSubmit}>
                         <div className="contact-form-wrapper">
                             <Form.Group controlId="formBasicEmail" className="contact-form-field">
                                 <Form.Label>
@@ -43,10 +43,10 @@ export default class ContactDetails extends Component {
                                     <Form.Label>
                                         <Icon icon={cellphoneIcon} style={{color: '#000000'}} className="contact-form-icon"/>
                                     </Form.Label>
-                                    <Form.Control type="" placeholder="Contact Number" className="contact-form-input" type="number"/>
+                                    <Form.Control placeholder="Contact Number" className="contact-form-input" type="number"/>
                             </Form.Group>
                         </div>
-                        <Button variant="primary" type="submit" className="contact-button" onClick={this.buttonClick}>
+                        <Button type="submit" className="contact-button" onClick={this.buttonClick}>
                             Continue
                         </Button>
                     </Form>
