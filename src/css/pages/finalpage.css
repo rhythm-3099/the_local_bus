@@ -93,8 +93,26 @@
 
 .table-row th {
     width: 200px;
+    text-align: left;
 }
 
 .table-row td {
     width: 200px;
+}
+
+.wrapper-button {
+    background-color: unset;
+}
+
+.final-home-button {
+    width: 200px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #acacac;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 4px;
+    font-weight: bold;
 }

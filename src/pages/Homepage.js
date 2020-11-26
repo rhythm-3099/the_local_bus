@@ -12,9 +12,14 @@ import AgentCircularMenu from '../components/homepage/AgentCircularMenu';
 
 export default class Homepage extends Component {
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+    
     searchButtonClicked = () => {
         this.props.history.push('/search')
     }
+
 
 
     render() {

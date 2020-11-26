@@ -5,6 +5,7 @@ import Homepage from './pages/Homepage';
 import Loginpage from './pages/Loginpage';
 import SearchResultPage from './pages/SearchResultPage';
 
+import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Helppage from './pages/Helppage';
 import PersonalDetailsPage from './pages/PersonalDetailsPage';
@@ -15,6 +16,7 @@ export default class App extends Component {
         return (
             <div>
                 <Router>
+                    <ScrollToTop />
                     <Navbar/>
                     <Route path="/" exact component={Homepage}/>
                     <Route path="/login/" component={Loginpage}/>

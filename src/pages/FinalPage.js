@@ -2,10 +2,16 @@ import React, { Component } from 'react';
 
 import '../css/pages/finalpage.css';
 
-import { Icon, InlineIcon } from '@iconify/react';
+import { Icon } from '@iconify/react';
 import checkCircle from '@iconify/icons-mdi/check-circle';
 
 export default class FinalPage extends Component {
+
+    homepageButtonClickHandler = () => {
+        this.props.history.push('/');
+    }
+
+
     render() {
         return (
             <div className="final-page">
@@ -131,6 +137,11 @@ export default class FinalPage extends Component {
                                 <h3>Total Chargeable fare </h3>
                                 <h3>INR 457</h3>
                             </div>
+                        </div>
+                    </div>
+                    <div className="ticket-details-wrapper wrapper-button">
+                        <div className="final-home-button" onClick={this.homepageButtonClickHandler}>
+                            Back to Homepage
                         </div>
                     </div>
                 </div>
