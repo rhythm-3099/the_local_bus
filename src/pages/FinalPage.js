@@ -139,7 +139,13 @@ export default class FinalPage extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="ticket-details-wrapper wrapper-button">
+                    <div className="ticket-details-wrapper wrapper-button final-buttons-wrapper">
+                        <div className="final-home-button" onClick={this.homepageButtonClickHandler}>
+                            Print Ticket
+                        </div>
+                        <div className="final-home-button" onClick={this.homepageButtonClickHandler}>
+                            Download Ticket
+                        </div>
                         <div className="final-home-button" onClick={this.homepageButtonClickHandler}>
                             Back to Homepage
                         </div>

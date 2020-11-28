@@ -24,7 +24,7 @@ export default class PaymentSummary extends Component {
                     <div className="payment-summary-component">
                         <div className="payment-places-wrapper">
                             <div className="payment-summary-subcomponent">
-                                <div className="payment-summary-vert-line"></div>
+                                
                                 <Icon icon={mapMarkerRadius} style={{color: '#000000'}} className="icon-payment"/>
                                 <div>
                                     <h4>Surat</h4>
@@ -32,6 +32,7 @@ export default class PaymentSummary extends Component {
                                     <p>11:30 PM, 27th Nov. 2020</p>
                                 </div>
                             </div>
+                            <div className="payment-summary-vert-line"></div>
                             <div className="payment-summary-subcomponent">
                                 <Icon icon={mapMarkerRadius} style={{color: '#000000'}} className="icon-payment"/>
                                 <div>

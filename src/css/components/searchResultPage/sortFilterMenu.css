@@ -19,6 +19,11 @@
     align-items: center;
 }
 
+.selected-option {
+    background-color: #cccccc;
+}
+
 .sort-filter-option:hover {
     background-color: #cccccc;
+    cursor: pointer;
 }

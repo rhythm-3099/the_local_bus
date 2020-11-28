@@ -48,3 +48,6 @@
     border-radius: 4px;
 }
 
+.modify-search-button:hover {
+    cursor: pointer;
+}

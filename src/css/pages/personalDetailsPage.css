@@ -4,12 +4,13 @@
 
 .personal-container-1 {
     width: 71%;
-    margin: 0 auto;
+    margin: 30px auto;
     text-align: center;
 }
 
 .personal-container-2 {
     flex: 1;
+    margin: 30px 0px;
 }
 
 .personal-info-list {

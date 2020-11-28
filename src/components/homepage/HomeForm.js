@@ -41,17 +41,33 @@ export default class HomeForm extends Component {
             <form className="home-form">
                 <div className="upper-wrapper">
                     <div className="from-field-home field">
-                        <label><img src={From} alt="from"/></label>
+                        <label className="home-form-popup-container">
+                            <img src={From} alt="from" className="home-form-icon"/>
+                            <div className="home-form-popup">
+                                <p>Select the city from where you will board the bus</p>
+                            </div>
+                        </label>
                         <input onChange={this.fromChangeHandler} placeholder="From" type="text"></input>
+                        
                     </div>
                     <div className="field">
-                    <label><img src={To} alt="to"/></label>
+                        <label className="home-form-popup-container">
+                            <img src={To} alt="to"/>
+                            <div className="home-form-popup">
+                                <p>Select the city where you want to go</p>
+                            </div>
+                        </label>
                         <input onChange={this.toChangeHandler} placeholder="To" type="text"></input>
                     </div>
                 </div>
                 <div className="upper-wrapper">
                     <div className="field">
-                        <label><img src={DateFrom} alt="date-from"/></label>
+                        <label className="home-form-popup-container">
+                            <img src={DateFrom} alt="date-from"/>
+                            <div className="home-form-popup">
+                                <p>Select the departure date</p>
+                            </div>
+                        </label>
                         <DatePicker 
                             selected={this.state.onwardDate} 
                             onChange={(date) => this.fromDateChangeHandler(date)} 
@@ -59,30 +75,42 @@ export default class HomeForm extends Component {
                             placeholderText="Select the travel date"
                         />
                     </div>
-                    <div className="field">
-                        <label><img src={DateTo} alt="date_to"/></label>
+                    <div className="field return-date-field">
+                        <label className="home-form-popup-container">
+                            <img src={DateTo} alt="date_to"/>
+                            <div className="home-form-popup">
+                                    <p>Select the return date</p>
+                            </div>
+                        </label>
                         <DatePicker 
                             selected={this.state.returnDate}  
                             onChange={(date) => this.toDateChangeHandler(date)} 
                             minDate={this.state.onwardDate}
+                            placeholderText="Select the return date *"
                         />
+                        <p className="asterisk-alert">* Optional</p>
                     </div>
                 </div>
                 <div className="upper-wrapper">
                     <div className="field">
-                        <label><img src={Seat} alt="Seat"/></label>
+                        <label className="home-form-popup-container">
+                            <img src={Seat} alt="Seat"/>
+                            <div className="home-form-popup">
+                                <p>Select the number of seats</p>
+                            </div>
+                        </label>
                         <input placeholder="Seats" type="number" min="1"></input>
                     </div>
                     
                     <div className="booking_buttons">
                         <input type="checkbox" id="advanced_booking" name="Advanced_booking" value="advanced_booking"/>
-                        <label for="advanced_booking">Advanced Booking</label><br/>
+                        <label htmlFor="advanced_booking">Advanced Booking</label><br/>
                         <input type="checkbox" id="divyang_booking" name="divyang_booking" value="divyang_booking"/>
-                        <label for="divyang_booking">Divyang Booking</label><br/>
+                        <label htmlFor="divyang_booking">Divyang Booking</label><br/>
                     </div>
                     <div className="field">
                         <input type="checkbox" id="single_lady" name="single_lady" value="single_lady"/>
-                        <label for="single_lady">Single Lady</label>
+                        <label htmlFor="single_lady">Single Lady</label>
                     </div>            
                 </div>
                 <div className="upper-wrapper">

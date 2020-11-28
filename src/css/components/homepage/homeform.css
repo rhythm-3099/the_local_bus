@@ -10,7 +10,7 @@
     display: flex;
     width: 100%;
     justify-content: space-between;
-    margin: 25px 5px;
+    margin: 35px 5px;
 }
 
 .field {
@@ -59,3 +59,50 @@
     cursor: pointer;
 }
 
+.return-date-field {
+    position: relative;
+}
+
+.asterisk-alert {
+    position: absolute;
+    top: 30px;
+    right: 0px;
+    font-size: 12px;
+}
+
+.home-form-popup-container {
+    position: relative;
+}
+
+.home-form-popup {
+    display: none;
+    padding: 5px;
+    background-color: wheat;
+    border-radius: 4px;
+    width: 10rem;
+    position: absolute;
+    z-index: 100;
+}
+
+.home-form-popup::after {
+    content: " ";
+    position: absolute;
+    left: 10px;
+    top: -7px;
+    border-top: none;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-bottom: 7px solid wheat;
+}
+
+.home-form-icon:hover {
+    cursor: pointer;
+}
+
+.home-form-popup-container:hover .home-form-popup{
+    display: block; 
+}
+
+.home-form-popup p{
+    margin: 5px;
+}

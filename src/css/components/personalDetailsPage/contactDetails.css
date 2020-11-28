@@ -50,3 +50,7 @@
     height: 50px;
     margin: 25px auto;
 }
+
+.contact-button:hover {
+    cursor: pointer;
+}

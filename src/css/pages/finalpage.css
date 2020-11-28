@@ -116,3 +116,10 @@
     border-radius: 4px;
     font-weight: bold;
 }
+
+.final-buttons-wrapper {
+    display: flex;
+    flex-direction: row !important;
+    width: 100%;
+    justify-content: space-evenly;
+}
