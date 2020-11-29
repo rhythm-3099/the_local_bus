@@ -8,9 +8,9 @@ export default class PersonalInfo extends Component {
         return (
             <div className="personal-info-list-wrapper">
                 <h2>Personal Information</h2>
-                <PersonalInfoCard />
-                <PersonalInfoCard />
-                <PersonalInfoCard />
+                <PersonalInfoCard passengerNum="1" seatNum="23"/>
+                <PersonalInfoCard passengerNum="2" seatNum="24"/>
+                <PersonalInfoCard passengerNum="3" seatNum="25"/>
             </div>
         )
     }

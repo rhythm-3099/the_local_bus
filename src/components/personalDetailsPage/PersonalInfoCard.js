@@ -14,9 +14,9 @@ export default class PersonalInfoCard extends Component {
                     <div className="personal-text-form">
                         <div className="personal-name-seat">
                             <Icon icon={accountIcon} style={{color: '#000000'}} />
-                            <h4>Passenger 1</h4>
+                            <h4>Passenger {this.props.passengerNum}</h4>
                             <span className="info-card-ver-div">|</span>
-                            <h4>Seat 23</h4>
+                            <h4>Seat {this.props.seatNum}</h4>
                         </div>
                         <div className="personal-text-field">
                             <input type="text" onChange={this.fromChangeHandler} placeholder="Name"/>
