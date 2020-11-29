@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import '../../css/components/searchResultPage/busOptionCard.css';
 
@@ -25,6 +26,8 @@ import speedometerIcon from '@iconify/icons-mdi/speedometer';
 import SeatChart from '../searchResultPage/SeatChart';
 import Pillow from '../../static/images/pillow.png'
 
+import { removeAllSeats } from '../../redux/actions/seatAction';
+import { removeBusInfo } from '../../redux/actions/busInfoAction';
 
 class BusOptionCard extends Component {
 
@@ -35,13 +38,35 @@ class BusOptionCard extends Component {
     }
 
     mouseLeftHandler = () => {
+        this.props.removeAllSeats();
+        this.props.removeBusInfo();
         this.setState({viewBusEnable: false});
     }
 
     getSeatChart = () => {
         let seatChart = null;
+
+        let busInfo = {
+            busName: this.props.busName,
+            busType: this.props.busType,
+            rating: this.props.rating,
+            from: this.props.from,
+            to: this.props.to,
+            duration: this.props.duration,
+            origin: this.props.origin,
+            destination: this.props.destination,
+            price: this.props.price,
+            via: this.props.via,
+            seatsAvailable: this.props.seatsAvailable,
+            fromTime: this.props.fromTime,
+            toTime: this.props.toTime
+        };
+
         if(this.state.viewBusEnable) {
-            seatChart = <SeatChart />
+            seatChart = <SeatChart 
+                price={this.props.price}
+                busInfo={busInfo}
+            />
         }
         return seatChart;
     }
@@ -54,35 +79,35 @@ class BusOptionCard extends Component {
             <div className="bus-card" onMouseLeave={this.mouseLeftHandler}>
                 <div className="bus-card-wrapper">
                     <div className="bus-card-section">
-                        <h3>1900SRTNKTACSLP</h3>
-                        <h4>AC , Sleeper</h4>
+                        <h3>{this.props.busName}</h3>
+                        <h4>{this.props.busType}</h4>
                         <div className="star-button">
                             <Icon icon={starIcon} style={{color: '#000000'}} />
-                            <h4>4.3</h4>
+                            <h4>{this.props.rating}</h4>
                         </div>
                     </div>
                     <div className="bus-card-section">
                         <div className="bus-card-subsection">
                             <Icon icon={mapMarker} style={{color: '#000000'}} />
-                            <h3>Surat</h3>
+                            <h3>{this.props.to}</h3>
                         </div>
                         <div className="bus-card-subsection">
                             <div className="vertical-line"></div>
-                            <h4 className="bus-time">05H 11M</h4>
+                            <h4 className="bus-time">{this.props.duration}</h4>
                         </div>
                         <div className="bus-card-subsection">
                             <Icon icon={mapMarker} style={{color: '#000000'}} />
-                            <h3>Ahd.</h3>
+                            <h3>{this.props.to}</h3>
                         </div>
                     </div>
                     <div className="bus-card-section">
                         <div className="bus-card-subsection">
                             <Icon icon={clockTimeFourOutline} style={{color: '#000000'}} />
-                            <h4>11:15 PM</h4>
+                            <h4>{this.props.fromTime}</h4>
                         </div>
                         <div className="bus-card-subsection">
                             <Icon icon={clockTimeFourOutline} style={{color: '#000000'}} />
-                            <h4>4:10 AM</h4>
+                            <h4>{this.props.toTime}</h4>
                         </div>
                     </div>
                     <div className="bus-card-section">
@@ -90,21 +115,21 @@ class BusOptionCard extends Component {
                             <h3>Origin</h3>
                             <div className="bus-card-subsection">
                                 <Icon icon={arrowReturnRight} style={{color: '#000000'}} />
-                                <h4>Surat Central Bus Station</h4>
+                                <h4>{this.props.origin}</h4>
                             </div>
                         </div>
                         <div className="bus-card-subsection-ver">
                             <h3>Destination</h3>
                             <div className="bus-card-subsection">
                                 <Icon icon={arrowReturnRight} style={{color: '#000000'}} />
-                                <h4>Nakhtrana</h4>
+                                <h4>{this.props.destination}</h4>
                             </div>
                         </div>
                     </div>
                     <div className="bus-card-section">
                         <h2>
                             <Icon icon={currencyInr} style={{color: '#000000'}} />
-                            <span className="bus-price">390</span>
+                            <span className="bus-price">{this.props.price}</span>
                         </h2>
                         <div className="view-seats-wrapper">
                             <div className="view-seats-button" 
@@ -112,13 +137,13 @@ class BusOptionCard extends Component {
                             >
                                 View Seats
                             </div>
-                            <h5>15 seats available</h5>
+                            <h5>{this.props.seatsAvailable} seats available</h5>
                         </div>
                     </div>
                     
                 </div>
                 <div className="bus-card-bottom-info">
-                    <p>[via- Baroda Amdavad Gandhidham Bhuj]</p>
+                    <p>[via-{this.props.via}]</p>
                     <div className="amenities-wrapper">
                         <h5 className="amen-head">Ameneties</h5>
                         <Icon icon={arrowDown} style={{color: '#000000'}} className="arrow-down-amen"/>
@@ -194,21 +219,20 @@ class BusOptionCard extends Component {
                     </div>
                 </div>
                 {this.getSeatChart()}
-                {
-                    /*
-                        Code for seat chart
-                    */
-                }
-    
-    
-    
-    
-    
-    
-    
-    
+                
             </div>
         )
     }
 }
-export default BusOptionCard;
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        removeAllSeats: () => dispatch(removeAllSeats()),
+        removeBusInfo: () => dispatch(removeBusInfo())
+    }
+}
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(BusOptionCard);

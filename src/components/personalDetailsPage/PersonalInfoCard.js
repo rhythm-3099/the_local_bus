@@ -1,11 +1,29 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import '../../css/components/personalDetailsPage/personalInfoCard.css';
 
 import { Icon } from '@iconify/react';
 import accountIcon from '@iconify/icons-mdi/account';
 
-export default class PersonalInfoCard extends Component {
+import { setPassenger } from '../../redux/actions/passengerAction';
+
+class PersonalInfoCard extends Component {
+
+    state = {
+        name: 'Name',
+        age: 0,
+        gender: 'Male'
+    }
+
+    genderClick = (gender) => {
+        this.setState({gender: gender})
+    }
+
+    formValueChangeHandler = (e) => {
+        this.setState({[e.target.name]: e.target.value});
+    }
+
     render() {
         return (
             <div className="personal-info-card">
@@ -19,19 +37,19 @@ export default class PersonalInfoCard extends Component {
                             <h4>Seat {this.props.seatNum}</h4>
                         </div>
                         <div className="personal-text-field">
-                            <input type="text" onChange={this.fromChangeHandler} placeholder="Name"/>
+                            <input type="text" onChange={this.formValueChangeHandler} placeholder="Name" name="name"/>
                         </div>
                         <div className="personal-text-field">
-                            <input type="number" onChange={this.fromChangeHandler} placeholder="Age"/>
+                            <input type="number" onChange={this.formValueChangeHandler} placeholder="Age" name="age"/>
                         </div>
                     </div>
                     <div className="personal-gender-form">
                         <h4>Gender</h4>
                         <div className="gender-buttons">
-                            <input type="radio" id="male" name="gender" value="male" />
-                            <label for="male">Male</label>
-                            <input type="radio" id="female" name="gender" value="female" />
-                            <label for="female">Female</label>
+                            <input type="radio" id="male" name="gender" value="male" onClick={() => this.genderClick('male')} defaultChecked/>
+                            <label for="male" onClick={() => this.genderClick('male')}>Male</label>
+                            <input type="radio" id="female" name="gender" value="female" onClick={() => this.genderClick('female')}/>
+                            <label for="female" onClick={() => this.genderClick('female')}>Female</label>
                         </div>
                     </div>
                 </div>
@@ -39,3 +57,14 @@ export default class PersonalInfoCard extends Component {
         )
     }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setPassenger: (passenger) => dispatch(setPassenger(passenger))
+    }
+}
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(PersonalInfoCard);

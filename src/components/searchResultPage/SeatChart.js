@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import '../../css/components/searchResultPage/seatChart.css';
 
@@ -13,7 +14,10 @@ import bedIcon from '@iconify/icons-mdi/bed';
 import Seat from './Seat';
 import SeatUpper from './SeatUpper';
 
-export default class SeatChart extends Component {
+import { setPrice } from '../../redux/actions/priceAction';
+import { setBusInfo } from '../../redux/actions/busInfoAction';
+
+class SeatChart extends Component {
 
     state = {boardingPoint: 'Surat Central Bus Station', droppingPoint: 'Ahmedabad Kalupur'};
 
@@ -25,10 +29,29 @@ export default class SeatChart extends Component {
         this.setState({droppingPoint: newDroppingPoint});
     }
 
-    // onContinueClickHandler = (e) => {
-    //     const history = useHistory();
-    //     history.push('/details');
-    // }
+    getSeatsInfo = () => {
+        let seatsArr = [...this.props.seatsArr];
+        let seatsInfo = seatsArr.join(', ');
+        return seatsInfo;
+    }
+
+    getPriceInfo = () => {
+        let seatsArr = [...this.props.seatsArr];
+        let statement = '';
+        statement = `${seatsArr.length} X ${this.props.price} = ${seatsArr.length * this.props.price}`;
+        return statement;
+    }
+
+    onContinueClick = () => {
+        let busData = {
+            ...this.props.busInfo,
+            boardingPoint: this.state.boardingPoint,
+            droppingPoint: this.state.droppingPoint
+        };
+
+        this.props.setBusInfo(busData);
+        this.props.setPrice(this.props.price);
+    }
 
     render() {
         return (
@@ -211,11 +234,11 @@ export default class SeatChart extends Component {
                     <div className="bb2">
                         <div className="hor-section-seat-chart">
                             <p>Seat(s) Selected:</p>
-                            <p>26, 27</p>
+                            <p>{this.getSeatsInfo()}</p>
                         </div>
                         <div className="hor-section-seat-chart">
                             <p>Total Fare:</p>
-                            <p>INR 780</p>
+                            <p>{this.getPriceInfo()}</p>
                         </div>
                         <div className="hor-div-line"></div>
                         <div className="hor-section-seat-chart">
@@ -258,7 +281,7 @@ export default class SeatChart extends Component {
                         {/* <div className="seat-continue-button" onClick={this.onContinueClickHandler}>
                             Continue
                         </div> */}
-                        <Link to="/details" className="seat-continue-button">
+                        <Link to="/details" className="seat-continue-button" onClick={this.onContinueClick}>
                             Continue
                         </Link>
                     </div>
@@ -267,3 +290,21 @@ export default class SeatChart extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        seatsArr: state.seat.seats 
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setPrice: (price) => dispatch(setPrice(price)),
+        setBusInfo: (busData) => dispatch(setBusInfo(busData)) 
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(SeatChart);

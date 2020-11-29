@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import '../css/pages/finalpage.css';
 
 import { Icon } from '@iconify/react';
 import checkCircle from '@iconify/icons-mdi/check-circle';
 
-export default class FinalPage extends Component {
+class FinalPage extends Component {
 
     homepageButtonClickHandler = () => {
         this.props.history.push('/');
     }
 
+    getSeats = () => {
+        let seatsArr = [...this.props.seats];
+        let seatsInfo = seatsArr.join(', ');
+        return seatsInfo;
+    }
 
     render() {
         return (
@@ -37,12 +43,12 @@ export default class FinalPage extends Component {
                                 <div className="ticket-detail-box">
                                     <h4>Boarding Time</h4>
                                     <div className="hor-line-detail-box"></div>
-                                    <p>7:15 AM</p>
+                                    <p>{this.props.busInfo.fromTime}</p>
                                 </div>
                                 <div className="ticket-detail-box">
                                     <h4>Boarding Point</h4>
                                     <div className="hor-line-detail-box"></div>
-                                    <p>Surat Central Bus Stand</p>
+                                    <p>{this.props.busInfo.boardingPoint}</p>
                                 </div>
                             </div>
                         </div>
@@ -54,12 +60,12 @@ export default class FinalPage extends Component {
                                 <div className="ticket-detail-box">
                                     <h4>Journey From</h4>
                                     <div className="hor-line-detail-box"></div>
-                                    <p>Surat</p>
+                                    <p>{this.props.busInfo.from}</p>
                                 </div>
                                 <div className="ticket-detail-box">
                                     <h4>Journey To</h4>
                                     <div className="hor-line-detail-box"></div>
-                                    <p>Gandhinagar</p>
+                                    <p>{this.props.busInfo.to}</p>
                                 </div>
                                 <div className="ticket-detail-box">
                                     <h4>Service Start Place</h4>
@@ -76,17 +82,17 @@ export default class FinalPage extends Component {
                                 <div className="ticket-detail-box">
                                     <h4>Class</h4>
                                     <div className="hor-line-detail-box"></div>
-                                    <p>Express</p>
+                                    <p>{this.props.busInfo.busType}</p>
                                 </div>
                                 <div className="ticket-detail-box">
                                     <h4>No. of Seats</h4>
                                     <div className="hor-line-detail-box"></div>
-                                    <p>2</p>
+                                    <p>{this.props.seats.length}</p>
                                 </div>
                                 <div className="ticket-detail-box">
                                     <h4>Booked Seats</h4>
                                     <div className="hor-line-detail-box"></div>
-                                    <p>23, 24</p>
+                                    <p>{this.getSeats()}</p>
                                 </div>
                                 <div className="ticket-detail-box">
                                     <h4>Trip Code</h4>
@@ -135,7 +141,7 @@ export default class FinalPage extends Component {
                         <div className="ticket-details-section">
                             <div className="fare-box">
                                 <h3>Total Chargeable fare </h3>
-                                <h3>INR 457</h3>
+                                <h3>INR {this.props.finalFare}</h3>
                             </div>
                         </div>
                     </div>
@@ -155,3 +161,17 @@ export default class FinalPage extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        busInfo: state.bus.busData,
+        price: state.price.price,
+        finalFare: state.price.finalPrice,
+        seats: state.seat.seats
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    null
+)(FinalPage);

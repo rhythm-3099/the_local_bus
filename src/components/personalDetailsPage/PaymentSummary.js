@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import '../../css/components/personalDetailsPage/paymentSummary.css';
 
@@ -6,7 +7,42 @@ import { Icon } from '@iconify/react';
 import busIcon from '@iconify/icons-mdi/bus';
 import mapMarkerRadius from '@iconify/icons-mdi/map-marker-radius';
 
-export default class PaymentSummary extends Component {
+import { setFinalPrice } from '../../redux/actions/priceAction';
+class PaymentSummary extends Component {
+
+    getBasicFare = () => {
+        return this.props.price * this.props.seats.length;
+    }
+
+    getTollFare = () => {
+        return 40;
+    }
+
+    getReservationFees = () => {
+        return this.props.seats.length * 3;
+    }
+
+    getGstFees = () => {
+        return Math.floor(this.getBasicFare() * 0.05);
+    }
+
+    getTotal = () => {
+        return this.getBasicFare() + 
+            this.getTollFare() + 
+            this.getReservationFees() + 
+            this.getGstFees();
+    }
+
+    getDiscount = () => {
+        return Math.floor(this.getTotal() * 0.1);
+    }
+
+    getFinalFare = () => {
+        const finalPrice = this.getTotal() - this.getDiscount();
+        this.props.setFinalPrice(finalPrice)
+        return finalPrice;
+    }
+
     render() {
         return (
             <div className="payment-summary">
@@ -14,10 +50,10 @@ export default class PaymentSummary extends Component {
                     <div className="payment-summary-component">
                         <Icon icon={busIcon} style={{color: '#000000'}} className="icon-payment"/>
                         <div>
-                            <h4>1900SRTNKTACSLP</h4>
-                            <p>Surat - Nakhtrana Sleeper</p>
+                            <h4>{this.props.busInfo.busName}</h4>
+                            <p>{this.props.busInfo.from} - {this.props.busInfo.to} {this.props.busInfo.busType}</p>
                             <p>Bus No. GJ -01-AB-1900</p>
-                            <p>Seats: 23</p>
+                            <p>Seats Available: {this.props.busInfo.seatsAvailable}</p>
                         </div>
                     </div>
                     <div className="payment-summary-div-hor"></div>
@@ -27,18 +63,18 @@ export default class PaymentSummary extends Component {
                                 
                                 <Icon icon={mapMarkerRadius} style={{color: '#000000'}} className="icon-payment"/>
                                 <div>
-                                    <h4>Surat</h4>
-                                    <p>Central Bus Depot</p>
-                                    <p>11:30 PM, 27th Nov. 2020</p>
+                                    <h4>{this.props.busInfo.from}</h4>
+                                    <p>{this.props.busInfo.boardingPoint}</p>
+                                    <p>{this.props.busInfo.fromTime} 27th Nov. 2020</p>
                                 </div>
                             </div>
                             <div className="payment-summary-vert-line"></div>
                             <div className="payment-summary-subcomponent">
                                 <Icon icon={mapMarkerRadius} style={{color: '#000000'}} className="icon-payment"/>
                                 <div>
-                                    <h4>Ahmedabad</h4>
-                                    <p>Kalupur</p>
-                                    <p>4:30 AM, 28th Nov. 2020</p>
+                                    <h4>{this.props.busInfo.to}</h4>
+                                    <p>{this.props.busInfo.droppingPoint}</p>
+                                    <p>{this.props.busInfo.toTime}, 28th Nov. 2020</p>
                                 </div>
                             </div>
                         </div>
@@ -54,10 +90,10 @@ export default class PaymentSummary extends Component {
                                 <p>GST</p>
                             </div>
                             <div className="payment-summary-vert-new">
-                                <p>460</p>
-                                <p>19</p>
-                                <p>5</p>
-                                <p>19</p>
+                                <p>{this.getBasicFare()}</p>
+                                <p>{this.getTollFare()}</p>
+                                <p>{this.getReservationFees()}</p>
+                                <p>{this.getGstFees()}</p>
                             </div>
                         </div>
                         <div className="payment-summary-div-hor"></div>
@@ -67,14 +103,14 @@ export default class PaymentSummary extends Component {
                                 <p>Discount</p>
                             </div>
                             <div className="payment-summary-vert-new">
-                                <p>503</p>
-                                <p>-46</p>
+                                <p>{this.getTotal()}</p>
+                                <p>-{this.getDiscount()}</p>
                             </div>
                         </div>
                         <div className="payment-summary-div-hor"></div>
                         <div className="payment-summary-component centering">
                             <h4>Final Fare: </h4>
-                            <h4>INR 457</h4>
+                            <h4>INR {this.getFinalFare()}</h4>
                         </div>
                     </div>
                 </div>
@@ -82,3 +118,22 @@ export default class PaymentSummary extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        price: state.price.price,
+        seats: state.seat.seats,
+        busInfo: state.bus.busData
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setFinalPrice: (finalPrice) => dispatch(setFinalPrice(finalPrice))
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(PaymentSummary);

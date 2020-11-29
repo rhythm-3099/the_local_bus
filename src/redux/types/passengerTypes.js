@@ -1,0 +1,1 @@
+export const SET_PASSENGER = 'SET_PASSENGER';
