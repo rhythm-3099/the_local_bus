@@ -19,11 +19,14 @@
 }
 
 .footer-section a, .footer-section h4 {
-    margin-top: 5px;
     margin-left: 20px;
     padding: 5px;
     text-decoration: none;
     font-size: 20px;
+}
+
+.footer-section a {
+    font-size: 16px;
 }
 
 .icon-set {
@@ -38,13 +41,17 @@
     height: 30px;
 }
 
+.icon-footer:hover {
+    cursor: pointer;
+}
+
 .footer-section a:hover {
     color: brown;
 }
 
 .bits-wrapper {
     width: 55%;
-    margin: 45px auto;
+    margin: 10px auto;
     display: flex;
     justify-content: space-around;
     align-items: center;

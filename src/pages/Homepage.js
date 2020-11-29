@@ -32,7 +32,9 @@ export default class Homepage extends Component {
                         marginTop: '50px',
                         display: 'flex',
                         justifyContent: 'space-between',
-                        alignItems: 'center'
+                        alignItems: 'center',
+                        position: 'relative',
+                        top: '-35px'
                     }}
                 >
                     <HomeForm className="home-form" searchButtonClicked={this.searchButtonClicked}/>

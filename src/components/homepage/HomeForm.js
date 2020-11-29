@@ -86,7 +86,7 @@ export default class HomeForm extends Component {
                             selected={this.state.returnDate}  
                             onChange={(date) => this.toDateChangeHandler(date)} 
                             minDate={this.state.onwardDate}
-                            placeholderText="Select the return date *"
+                            placeholderText="Select the return date"
                         />
                         <p className="asterisk-alert">* Optional</p>
                     </div>
