@@ -44,57 +44,57 @@ export default class SeatChart extends Component {
                                 <div className="lower-upper-deck">
                                     <div className="lower-deck-row">
                                         <Icon icon={steeringIcon} style={{color: '#000000'}} hFlip={true} className="steer-icon"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={1}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={2}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={3}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={4}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={5}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={6}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={7}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={8}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={9}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={10}/>
                                     </div>
                                     <div className="lower-deck-row">
                                         <Icon icon={steeringIcon} style={{color: '#000000'}} hFlip={true} className="steer-icon hidden-steer"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={11}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={12}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={13}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={14}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={15}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={16}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={17}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={18}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={19}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={20}/>
                                     </div>
                                 </div>
                                 <div className="lower-upper-deck">
                                     <div className="lower-deck-row">
                                         <Icon icon={steeringIcon} style={{color: '#000000'}} hFlip={true} className="steer-icon hidden-steer"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Booked"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Lady"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Lady"/>
-                                        <Seat className="lower-deck-icon" seatProp="Lady"/>
-                                        <Seat className="lower-deck-icon" seatProp="Lady"/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={21}/>
+                                        <Seat className="lower-deck-icon" seatProp="Booked" seatNum={22}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={23}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={24}/>
+                                        <Seat className="lower-deck-icon" seatProp="Lady" seatNum={25}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={26}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={27}/>
+                                        <Seat className="lower-deck-icon" seatProp="Lady" seatNum={28}/>
+                                        <Seat className="lower-deck-icon" seatProp="Lady" seatNum={29}/>
+                                        <Seat className="lower-deck-icon" seatProp="Lady" seatNum={30}/>
                                     </div>
                                     <div className="lower-deck-row">
                                         <Icon icon={steeringIcon} style={{color: '#000000'}} hFlip={true} className="steer-icon hidden-steer"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Booked"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Booked"/>
-                                        <Seat className="lower-deck-icon" seatProp="Lady"/>
-                                        <Seat className="lower-deck-icon" seatProp="Booked"/>
-                                        <Seat className="lower-deck-icon" seatProp="Lady"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
-                                        <Seat className="lower-deck-icon" seatProp="Available"/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={31}/>
+                                        <Seat className="lower-deck-icon" seatProp="Booked" seatNum={32}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={33}/>
+                                        <Seat className="lower-deck-icon" seatProp="Booked" seatNum={34}/>
+                                        <Seat className="lower-deck-icon" seatProp="Lady" seatNum={35}/>
+                                        <Seat className="lower-deck-icon" seatProp="Booked" seatNum={36}/>
+                                        <Seat className="lower-deck-icon" seatProp="Lady" seatNum={37}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={38}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={39}/>
+                                        <Seat className="lower-deck-icon" seatProp="Available" seatNum={40}/>
                                     </div>
                                 </div>
                             </div>
@@ -111,57 +111,57 @@ export default class SeatChart extends Component {
                                 <div className="lower-upper-deck">
                                     <div className="lower-deck-row">
                                         <Icon icon={steeringIcon} style={{color: '#000000'}} hFlip={true} className="steer-icon hidden-steer"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Booked"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Booked"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Lady"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Booked"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Lady"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={41}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Booked" seatNum={42}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={43}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Booked" seatNum={44}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Lady" seatNum={45}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Booked" seatNum={46}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Lady" seatNum={47}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={48}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={49}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={50}/>
                                     </div>
                                     <div className="lower-deck-row">
                                         <Icon icon={steeringIcon} style={{color: '#000000'}} hFlip={true} className="steer-icon hidden-steer"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Booked"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Booked"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Lady"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Booked"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Lady"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={51}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Booked" seatNum={52}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={53}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Booked" seatNum={54}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Lady" seatNum={55}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Booked" seatNum={56}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Lady" seatNum={57}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={58}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={59}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={60}/>
                                     </div>
                                 </div>
                                 <div className="lower-upper-deck">
                                     <div className="lower-deck-row">
                                         <Icon icon={steeringIcon} style={{color: '#000000'}} hFlip={true} className="steer-icon hidden-steer"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Booked"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Booked"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Lady"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Booked"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Lady"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={61}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Booked" seatNum={62}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={63}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Booked" seatNum={64}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Lady" seatNum={65}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Booked" seatNum={66}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Lady" seatNum={67}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={68}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={69}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={70}/>
                                     </div>
                                     <div className="lower-deck-row">
                                         <Icon icon={steeringIcon} style={{color: '#000000'}} hFlip={true} className="steer-icon hidden-steer"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Booked"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Booked"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Lady"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Booked"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Lady"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
-                                        <SeatUpper className="lower-deck-icon" seatProp="Available"/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={71}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Booked" seatNum={72}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={73}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Booked" seatNum={74}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Lady" seatNum={75}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Booked" seatNum={76}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Lady" seatNum={77}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={78}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={79}/>
+                                        <SeatUpper className="lower-deck-icon" seatProp="Available" seatNum={80}/>
                                     </div>
                                 </div>
                             </div>

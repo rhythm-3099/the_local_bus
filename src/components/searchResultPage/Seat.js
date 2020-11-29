@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addSeat, removeSeat } from '../../redux/actions/seatAction';
 
 import '../../css/components/searchResultPage/seat.css';
 
 import { Icon } from '@iconify/react';
 import seatPassenger from '@iconify/icons-mdi/seat-passenger';
 
-export default class Seat extends Component {
+class Seat extends Component {
 
     state = {clicks: 0, seatProp: this.props.seatProp}
 
@@ -45,8 +47,16 @@ export default class Seat extends Component {
 
 
     onClickHandler = () => {
-        if(this.state.seatProp === 'Available')
+        if(this.state.seatProp === 'Available'){
+            
+            if(this.state.clicks % 2 == 0) {
+                this.props.addSeat(this.props.seatNum);
+            } else {
+                this.props.removeSeat(this.props.seatNum);
+            }
+
             this.setState({clicks: this.state.clicks+1});
+        }
     }
 
 
@@ -64,3 +74,21 @@ export default class Seat extends Component {
         )
     }
 }
+
+// const mapStateToProps = (state) => {
+//     return {
+
+//     }
+// }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        addSeat: (seatNum) => dispatch(addSeat(seatNum)),
+        removeSeat: (seatNum) => dispatch(removeSeat(seatNum))
+    }
+}
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(Seat);
