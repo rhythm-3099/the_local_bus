@@ -67,7 +67,7 @@ class PersonalInfoCard extends Component {
         return (
             <div className="personal-info-card">
                 
-                <div className="personal-info-form">
+                <form className="personal-info-form">
                     <div className="personal-text-form">
                         <div className="personal-name-seat">
                             <Icon icon={accountIcon} style={{color: '#000000'}} />
@@ -91,7 +91,7 @@ class PersonalInfoCard extends Component {
                             <label for="female" onClick={() => this.genderClick('female')}>Female</label>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         )
     }

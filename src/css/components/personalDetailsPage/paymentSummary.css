@@ -9,10 +9,10 @@
     display: flex;
     flex-direction: column;
     background-color: #F1F4F8;
+    padding: 10px 0px;
 }
 
 .payment-summary-component, .payment-summary-component-price-conponent {
-    /* width: 90%; */
     width: 100%;
     display: flex;
     justify-content: space-around;

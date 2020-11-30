@@ -54,6 +54,7 @@
     padding: 0 5px;
     border-radius: 4px;
     margin-right: 5px;
+    box-shadow: 2px 4px 4px #888888;
 }
 
 .modify-search-button:hover {

@@ -34,13 +34,46 @@ export default class Loginpage extends Component {
         return (
             <div>
                 <div className="login-option-wrapper">
-                    <div className="login-option" onClick={() => this.categoryClickHandler('User')}>
+                    <div 
+                        className="login-option" 
+                        onClick={() => this.categoryClickHandler('User')}
+                        style={ this.state.currectLogin === 'User' ? {
+                                backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)',
+                                color: '#ffffff'
+                            } : {
+                                backgroundColor: '#F1F4F8',
+                                color: '#555555'
+                            }
+                        }
+                    >
                         <h2>User</h2>
                     </div>
-                    <div className="login-option" onClick={() => this.categoryClickHandler('Agent')}>
+                    <div 
+                        className="login-option" 
+                        onClick={() => this.categoryClickHandler('Agent')}
+                        style={ this.state.currectLogin === 'Agent' ? {
+                            backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)',
+                            color: '#ffffff'
+                        } : {
+                            backgroundColor: '#F1F4F8',
+                            color: '#555555'
+                        }
+                    }
+                    >
                         <h2>Agent</h2>
                     </div>
-                    <div className="login-option" onClick={() => this.categoryClickHandler('Staff')}>
+                    <div 
+                        className="login-option" 
+                        onClick={() => this.categoryClickHandler('Staff')}
+                        style={ this.state.currectLogin === 'Staff' ? {
+                            backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)',
+                            color: '#ffffff'
+                        } : {
+                            backgroundColor: '#F1F4F8',
+                            color: '#555555'
+                        }
+                    }
+                    >
                         <h2>Staff</h2>
                     </div>
                 </div>

@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 
 import '../../css/components/homepage/slider.css';
 
+import { Icon } from '@iconify/react';
+import chevronLeft from '@iconify/icons-mdi/chevron-left';
+import chevronRight from '@iconify/icons-mdi/chevron-right';
+
 import Img1 from '../../static/images/slider_images/slider1.jpg';
 import Img2 from '../../static/images/slider_images/slider2.jpg';
 
@@ -43,8 +47,10 @@ class Slider extends Component {
             <div className="slider">
                 <img src={images[this.state.index % 2]} alt="background" className="slider-img"/>
                 <div className="slider-arrows">
-                    <img src={Arrow_left} alt="arrow left" className="slider-arrow left" onClick={this.arrowClickHandler}/>
-                    <img src={Arrow_right} alt="arrow right" className="slider-arrow right" onClick={this.arrowClickHandler}/>
+                    {/* <img src={Arrow_left} alt="arrow left" className="slider-arrow left" onClick={this.arrowClickHandler}/> */}
+                    <Icon icon={chevronLeft} style={{color: '#000000'}} className="slider-arrow left" onClick={this.arrowClickHandler}/>
+                    {/* <img src={Arrow_right} alt="arrow right" className="slider-arrow right" onClick={this.arrowClickHandler}/> */}
+                    <Icon icon={chevronRight} style={{color: '#000000'}} className="slider-arrow right" onClick={this.arrowClickHandler}/>
                 </div>
                 {this.getIndicators()}
             </div>

@@ -78,6 +78,7 @@
     align-items: center;
     font-size: 16px;
     border-radius: 4px;
+    box-shadow: 2px 4px 4px #888888;
     cursor: pointer;
 }
 
