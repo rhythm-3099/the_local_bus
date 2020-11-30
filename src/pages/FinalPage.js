@@ -18,6 +18,33 @@ class FinalPage extends Component {
         return seatsInfo;
     }
 
+    getPassengerInfo = () => {
+        let passengersArr = this.props.passengers;
+        let seats = this.props.seats;
+
+        let passengerInfo = passengersArr.map((passenger, index) => {
+            const srNum = index + 1;
+            const name = passenger.name;
+            const seatNum = seats[index]; 
+            const age = passenger.age;
+            const ageType = age >= 18 ? "Adult" : "Child";
+            const gender = passenger.gender;
+
+            return(
+                <tr className="table-row" key={srNum}>
+                    <td>{srNum}</td>
+                    <td>{name}</td>
+                    <td>{seatNum}</td>
+                    <td>{age}</td>
+                    <td>{ageType}</td>
+                    <td>{gender}</td>
+                </tr>
+            )
+        });
+
+        return passengerInfo;
+    }
+
     render() {
         return (
             <div className="final-page">
@@ -117,22 +144,7 @@ class FinalPage extends Component {
                                 </thead>
                                 <div className="hor-line-passenger-table"></div>
                                 <tbody className="table-head">
-                                    <tr className="table-row">
-                                        <td>1</td>
-                                        <td>Prayag Monsara</td>
-                                        <td>23</td>
-                                        <td>21</td>
-                                        <td>Adult</td>
-                                        <td>Male</td>
-                                    </tr>
-                                    <tr className="table-row">
-                                        <td>2</td>
-                                        <td>Bhodo</td>
-                                        <td>24</td>
-                                        <td>21</td>
-                                        <td>Adult</td>
-                                        <td>Female</td>
-                                    </tr>
+                                    {this.getPassengerInfo()}
                                 </tbody>
                             </table>
                         </div>
@@ -167,7 +179,8 @@ const mapStateToProps = (state) => {
         busInfo: state.bus.busData,
         price: state.price.price,
         finalFare: state.price.finalPrice,
-        seats: state.seat.seats
+        seats: state.seat.seats,
+        passengers: state.passenger.passengers
     }
 }
 

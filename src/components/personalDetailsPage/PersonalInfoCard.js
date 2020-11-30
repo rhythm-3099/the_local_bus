@@ -16,12 +16,51 @@ class PersonalInfoCard extends Component {
         gender: 'Male'
     }
 
+    componentDidMount = () => {
+        let passengerArr = [...this.props.passengers];
+        let passenger = {
+            name: this.state.name,
+            age: this.state.age,
+            gender: this.state.gender
+        }
+        passengerArr[this.props.index] = passenger;
+        this.props.setPassenger(passengerArr);
+    }
+
     genderClick = (gender) => {
+        let passengerArr = [...this.props.passengers];
+        let passenger = {
+            name: this.state.name,
+            age: this.state.age,
+            gender: gender
+        }
+        passengerArr[this.props.index] = passenger;
+        this.props.setPassenger(passengerArr);
         this.setState({gender: gender})
     }
 
-    formValueChangeHandler = (e) => {
-        this.setState({[e.target.name]: e.target.value});
+    nameChangeHandler = (e) => {
+        let passengerArr = [...this.props.passengers];
+        let passenger = {
+            name: e.target.value,
+            age: this.state.age,
+            gender: this.state.gender
+        }
+        passengerArr[this.props.index] = passenger;
+        this.props.setPassenger(passengerArr);
+        this.setState({name: e.target.value})
+    }
+
+    ageChangeHandler = (e) => {
+        let passengerArr = [...this.props.passengers];
+        let passenger = {
+            name: this.state.name,
+            age: parseInt(e.target.value),
+            gender: this.state.gender
+        }
+        passengerArr[this.props.index] = passenger;
+        this.props.setPassenger(passengerArr);
+        this.setState({age: parseInt(e.target.value)})
     }
 
     render() {
@@ -32,15 +71,15 @@ class PersonalInfoCard extends Component {
                     <div className="personal-text-form">
                         <div className="personal-name-seat">
                             <Icon icon={accountIcon} style={{color: '#000000'}} />
-                            <h4>Passenger {this.props.passengerNum}</h4>
+                            <h4>Passenger {this.props.index+1}</h4>
                             <span className="info-card-ver-div">|</span>
                             <h4>Seat {this.props.seatNum}</h4>
                         </div>
                         <div className="personal-text-field">
-                            <input type="text" onChange={this.formValueChangeHandler} placeholder="Name" name="name"/>
+                            <input type="text" onChange={this.nameChangeHandler} placeholder="Name" name="name"/>
                         </div>
                         <div className="personal-text-field">
-                            <input type="number" onChange={this.formValueChangeHandler} placeholder="Age" name="age"/>
+                            <input type="number" onChange={this.ageChangeHandler} placeholder="Age" name="age"/>
                         </div>
                     </div>
                     <div className="personal-gender-form">
@@ -58,13 +97,19 @@ class PersonalInfoCard extends Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        passengers: state.passenger.passengers
+    }
+}
+
 const mapDispatchToProps = (dispatch) => {
     return {
-        setPassenger: (passenger) => dispatch(setPassenger(passenger))
+        setPassenger: (passengers) => dispatch(setPassenger(passengers))
     }
 }
 
 export default connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
 )(PersonalInfoCard);

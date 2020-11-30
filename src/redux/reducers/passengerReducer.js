@@ -8,10 +8,10 @@ const passengerReducer = (state = initialState, action) => {
     switch(action.type) {
         case SET_PASSENGER:
             return {
-                passengers: [
-                    ...state.passengers,
+                passengers: 
+                    // ...state.passengers,
                     action.payload
-                ]
+                
             }
 
         default:

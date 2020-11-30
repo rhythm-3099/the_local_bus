@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import '../../css/components/personalDetailsPage/contactDetails.css';
 
@@ -7,7 +8,22 @@ import { Icon } from '@iconify/react';
 import atIcon from '@iconify/icons-mdi/at';
 import {Form, Button} from 'react-bootstrap';
 
-export default class ContactDetails extends Component {
+import { setContact } from '../../redux/actions/contactAction';
+
+class ContactDetails extends Component {
+
+    state = {
+        email: '',
+        phoneNumber: ''
+    }
+
+    emailChangeHandler = (e) => {
+        this.setState({email: e.target.value})
+    }
+
+    phoneNumberChangeHandler = (e) => {
+        this.setState({phoneNumber: e.target.value})
+    }
 
     onFormSubmit = (e) => {
         e.preventDefault();
@@ -20,6 +36,11 @@ export default class ContactDetails extends Component {
 
     buttonClick = (e) => {
         e.preventDefault();
+        let contact = {
+            email: this.state.email,
+            phoneNumber: this.state.phoneNumber
+        };
+        this.props.setContact(contact);
         this.navAway();
     }
 
@@ -35,7 +56,7 @@ export default class ContactDetails extends Component {
                                 <Form.Label>
                                     <Icon icon={atIcon} style={{color: '#9C9C9C'}} className="contact-form-icon"/>
                                 </Form.Label>
-                                <Form.Control type="email" placeholder="Enter email" className="contact-form-input"/>
+                                <Form.Control type="email" placeholder="Enter email" className="contact-form-input" onChange={this.emailChangeHandler}/>
                                     
                             </Form.Group>
 
@@ -43,7 +64,7 @@ export default class ContactDetails extends Component {
                                     <Form.Label>
                                         <Icon icon={cellphoneIcon} style={{color: '#000000'}} className="contact-form-icon"/>
                                     </Form.Label>
-                                    <Form.Control placeholder="Contact Number" className="contact-form-input" type="number"/>
+                                    <Form.Control placeholder="Contact Number" className="contact-form-input" type="number" onChange={this.phoneNumberChangeHandler}/>
                             </Form.Group>
                         </div>
                         <Button type="submit" className="contact-button" onClick={this.buttonClick}>
@@ -56,3 +77,14 @@ export default class ContactDetails extends Component {
         )
     }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setContact: (contact) => dispatch(setContact(contact))
+    }
+}
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(ContactDetails);
