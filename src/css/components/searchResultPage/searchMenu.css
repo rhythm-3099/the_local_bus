@@ -5,6 +5,8 @@
     margin: 35px auto;
     border-radius: 4px;
     padding: 5px;
+    position: relative;
+    z-index: 100000;
 }
 
 .search-form {
@@ -16,6 +18,15 @@
 }
 
 .search-field-container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    margin-left: 20px;
+    border-radius: 5px;
+    padding: 0px 4px;
+}
+
+.single-lady-field-container {
     display: flex;
     align-items: center;
     height: 50px;
@@ -38,6 +49,11 @@
     border-radius: 4px;
     width: 100px;
     background-color: #CCD9F9;
+}
+
+.single-lady-field-container input {
+    height: 16px;
+    width: 30px;
 }
 
 .date-inputs {

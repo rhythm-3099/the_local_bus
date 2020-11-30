@@ -64,6 +64,28 @@ class SearchMenu extends Component {
         return newDate;
     }
 
+    makeDateObject = (dateString) => {
+
+        if(dateString === ''){
+            return null;
+        }
+        
+        let dateArr = dateString.split('/');
+        console.log('dateArr, ', dateArr);
+
+        let day = parseInt(dateArr[1]);
+        let month = parseInt(dateArr[0]) - 1;
+        let year = parseInt(dateArr[2]);
+
+        console.log('year, ', year);
+        console.log('month, ', month);
+        console.log('day, ', day);
+
+        let dateObj = new Date(year, month, day);
+        console.log('herer ', dateObj);
+        return dateObj;
+    }
+
     render() {
         return (
             <div className="search-menu">
@@ -82,7 +104,7 @@ class SearchMenu extends Component {
                         <img src={DateFrom} alt="date-from"/>
                         <label>Date</label>
                         <DatePicker 
-                            placeholderText={this.props.searchInfo.fromDate}
+                            selected={this.makeDateObject(this.props.searchInfo.fromDate)}
                             onChange={(date) => this.fromDateChangeHandler(date)} 
                             minDate={new Date()}
                             className="date-inputs"
@@ -92,7 +114,7 @@ class SearchMenu extends Component {
                         <img src={DateTo} alt="date-from"/>
                         <label>Return Date</label>
                         <DatePicker 
-                            placeholderText={this.props.searchInfo.toDate}
+                            selected={this.makeDateObject(this.props.searchInfo.toDate)}
                             onChange={(date) => this.toDateChangeHandler(date)} 
                             minDate={new Date()}
                             placeholderText="Return Date"
@@ -103,7 +125,7 @@ class SearchMenu extends Component {
                         <label><img src={Seat} alt="Seat"/></label>
                         <input defaultValue={this.props.searchInfo.seats} type="number" onChange={this.seatsChangeHandler}></input>
                     </div>
-                    <div className="search-field-container">
+                    <div className="search-field-container single-lady-field-container">
                         <input type="checkbox" id="single_lady" name="single_lady" value="single_lady" defaultChecked={this.props.searchInfo.isSingleLady} onClick={this.isSingleLadyChangeHandler}/>
                         <label htmlFor="single_lady" onClick={this.isSingleLadyChangeHandler}>Single Lady</label>
                     </div>

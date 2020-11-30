@@ -40,6 +40,10 @@ class HomeForm extends Component {
     }
 
     getStringifiedDate = (date) => {
+
+        if(date === null)
+            return '';
+        
         let dd = String(date.getDate()).padStart(2, '0');
         let mm = String(date.getMonth() + 1).padStart(2, '0'); 
         let yyyy = date.getFullYear();
