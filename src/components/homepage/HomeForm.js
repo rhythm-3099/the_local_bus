@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import '../../css/components/homepage/homeform.css';
 
@@ -11,9 +12,11 @@ import DateTo from '../../static/images/date_to.png';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-export default class HomeForm extends Component {
+import { setSearchInfo } from '../../redux/actions/searchAction';
 
-    state = {from: '', to: '', onwardDate: new Date(), returnDate: null, seats: 0};
+class HomeForm extends Component {
+
+    state = {from: '', to: '', onwardDate: new Date(), returnDate: null, seats: 0, isSingleLady: 0};
 
     fromChangeHandler = (e) => {
         this.setState({from: e.target.value});
@@ -31,9 +34,28 @@ export default class HomeForm extends Component {
         this.setState({returnDate: date});
     }
 
+    seatsChangeHandler = (e) => {
+        this.setState({seats: parseInt(e.target.value)})
+    }
+
     searchButtonCLickHandler = (e) => {
         e.preventDefault();
+        let searchInfo = {
+            from: this.state.from,
+            to: this.state.to,
+            fromDate: this.state.onwardDate,
+            toDate: this.state.returnDate,
+            seats: this.state.seats,
+            isSingleLady: this.state.isSingleLady
+        }
+
+        this.props.setSearchInfo(searchInfo);
         this.props.searchButtonClicked();
+    }
+
+    singleLadyClickHandler = (e) => {
+        let newVal = !this.state.isSingleLady;
+        this.setState({isSingleLady: newVal});
     }
 
     render() {
@@ -99,7 +121,7 @@ export default class HomeForm extends Component {
                                 <p>Select the number of seats</p>
                             </div>
                         </label>
-                        <input placeholder="Seats" type="number" min="1"></input>
+                        <input placeholder="Seats" type="number" min="1" onChange={this.seatsChangeHandler}></input>
                     </div>
                     
                     <div className="booking_buttons">
@@ -109,8 +131,8 @@ export default class HomeForm extends Component {
                         <label htmlFor="divyang_booking">Divyang Booking</label><br/>
                     </div>
                     <div className="field">
-                        <input type="checkbox" id="single_lady" name="single_lady" value="single_lady"/>
-                        <label htmlFor="single_lady">Single Lady</label>
+                        <input type="checkbox" id="single_lady" name="single_lady" value="single_lady" onClick={this.singleLadyClickHandler}/>
+                        <label htmlFor="single_lady" onClick={this.singleLadyClickHandler}>Single Lady</label>
                     </div>            
                 </div>
                 <div className="upper-wrapper">
@@ -121,3 +143,14 @@ export default class HomeForm extends Component {
         )
     }
 }
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setSearchInfo: (searchInfo) => dispatch(setSearchInfo(searchInfo))
+    }
+}
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(HomeForm);

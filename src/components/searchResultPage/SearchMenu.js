@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import '../../css/components/searchResultPage/searchMenu.css';
 
@@ -13,7 +14,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 class SearchMenu extends Component {
 
-    state = {from: '', to: '', onwardDate: new Date(), returnDate: null};
+    state = {from: this.props.searchInfo.from, to: this.props.searchInfo.to, onwardDate: this.props.searchInfo.fromDate, returnDate: this.props.searchInfo.toDate};
 
     fromChangeHandler = (e) => {
         this.setState({from: e.target.value});
@@ -38,12 +39,12 @@ class SearchMenu extends Component {
                     <div className="search-field-container">
                         <img src={From} alt="from"/>
                         <label>From</label>
-                        <input type="text" onChange={this.fromChangeHandler} placeholder="Surat"/>
+                        <input type="text" onChange={this.fromChangeHandler} defaultValue={this.props.searchInfo.from}/>
                     </div>
                     <div className="search-field-container">
                         <img src={To} alt="to"/>
                         <label>To</label>
-                        <input type="text" onChange={this.toChangeHandler} placeholder="Ahmedabad"/>
+                        <input type="text" onChange={this.toChangeHandler} defaultValue={this.props.searchInfo.to}/>
                     </div>
                     <div className="search-field-container">
                         <img src={DateFrom} alt="date-from"/>
@@ -52,7 +53,6 @@ class SearchMenu extends Component {
                             selected={this.state.onwardDate} 
                             onChange={(date) => this.fromDateChangeHandler(date)} 
                             minDate={new Date()}
-                            placeholderText="Select the travel date"
                             className="date-inputs"
                         />
                     </div>
@@ -60,20 +60,20 @@ class SearchMenu extends Component {
                         <img src={DateTo} alt="date-from"/>
                         <label>Return Date</label>
                         <DatePicker 
-                            selected={this.state.onwardDate} 
+                            selected={this.state.returnDate} 
                             onChange={(date) => this.toDateChangeHandler(date)} 
                             minDate={new Date()}
-                            placeholderText="Select the travel date"
+                            placeholderText="Return Date"
                             className="date-inputs"
                         />
                     </div>
                     <div className="search-field-container">
                         <label><img src={Seat} alt="Seat"/></label>
-                        <input placeholder="Seats" type="number"></input>
+                        <input defaultValue={this.props.searchInfo.seats} type="number"></input>
                     </div>
                     <div className="search-field-container">
-                        <input type="checkbox" id="single_lady" name="single_lady" value="single_lady" />
-                        <label for="single_lady">Single Lady</label>
+                        <input type="checkbox" id="single_lady" name="single_lady" value="single_lady" defaultChecked={this.props.searchInfo.isSingleLady}/>
+                        <label htmlFor="single_lady">Single Lady</label>
                     </div>
                     <div className="search-field-container">
                         <div className="modify-search-button">
@@ -86,4 +86,13 @@ class SearchMenu extends Component {
     }
 }
 
-export default SearchMenu;
+const mapStateToProps = (state) => {
+    return {
+        searchInfo: state.searchInfo.searchInfo
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    null
+)(SearchMenu);

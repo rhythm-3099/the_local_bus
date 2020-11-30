@@ -215,31 +215,31 @@ export default class SideFilter extends Component {
                             <div className="radio-element-wrapper">
                                 <div className="radio-element">
                                     <input type="checkbox" id="bus_type_1" name="bus_type_1" value="AC Sleeper" />
-                                    <label for="bus_type_1">AC Sleeper</label>
+                                    <label htmlFor="bus_type_1">AC Sleeper</label>
                                 </div>
                                 <div className="radio-element">
                                     <input type="checkbox" id="bus_type_2" name="bus_type_2" value="Seater" />
-                                    <label for="bus_type_2">Seater</label>
+                                    <label htmlFor="bus_type_2">Seater</label>
                                 </div>
                                 <div className="radio-element">
                                     <input type="checkbox" id="bus_type_3" name="bus_type_3" value="Semi Sleeper" />
-                                    <label for="bus_type_3">Semi Sleeper</label>
+                                    <label htmlFor="bus_type_3">Semi Sleeper</label>
                                 </div>
                                 <div className="radio-element">
                                     <input type="checkbox" id="bus_type_4" name="bus_type_4" value="Sleeper" />
-                                    <label for="bus_type_4">Sleeper</label>
+                                    <label htmlFor="bus_type_4">Sleeper</label>
                                 </div>
                                 <div className="radio-element">
                                     <input type="checkbox" id="bus_type_5" name="bus_type_5" value="Gurjarnagari" />
-                                    <label for="bus_type_5">Gurjarnagari</label>
+                                    <label htmlFor="bus_type_5">Gurjarnagari</label>
                                 </div>
                                 <div className="radio-element">
                                     <input type="checkbox" id="bus_type_6" name="bus_type_6" value="Express" />
-                                    <label for="bus_type_6">Express</label>
+                                    <label htmlFor="bus_type_6">Express</label>
                                 </div>
                                 <div className="radio-element">
                                     <input type="checkbox" id="bus_type_7" name="bus_type_7" value="Volvo" />
-                                    <label for="bus_type_7">Volvo</label>
+                                    <label htmlFor="bus_type_7">Volvo</label>
                                 </div>
                             </div>
                         </AccordionDetails>
@@ -256,19 +256,19 @@ export default class SideFilter extends Component {
                             <div className="radio-element-wrapper">
                                 <div className="radio-element">
                                     <input type="checkbox" id="rating_type_1" name="rating_type_1" value="All" />
-                                    <label for="rating_type_1">All</label>
+                                    <label htmlFor="rating_type_1">All</label>
                                 </div>
                                 <div className="radio-element">
                                     <input type="checkbox" id="rating_type_2" name="rating_type_2" value="5" />
-                                    <label for="rating_type_2">5</label>
+                                    <label htmlFor="rating_type_2">5</label>
                                 </div>
                                 <div className="radio-element">
                                     <input type="checkbox" id="rating_type_3" name="rating_type_3" value="4" />
-                                    <label for="rating_type_3">4 +</label>
+                                    <label htmlFor="rating_type_3">4 +</label>
                                 </div>
                                 <div className="radio-element">
                                     <input type="checkbox" id="rating_type_4" name="rating_type_4" value="3" />
-                                    <label for="rating_type_4">3 +</label>
+                                    <label htmlFor="rating_type_4">3 +</label>
                                 </div>
                                 
                             </div>
@@ -286,63 +286,63 @@ export default class SideFilter extends Component {
                             <div className="radio-element-wrapper-amen">
                                 <div className="radio-element-amen">
                                     <input type="checkbox" id="amen_type_1" name="amen_type_1" value="Live Tracking" />
-                                    <label for="amen_type_1">Live Tracking</label>
+                                    <label htmlFor="amen_type_1">Live Tracking</label>
                                 </div>
                                 <div className="radio-element-amen">
                                     <input type="checkbox" id="amen_type_2" name="amen_type_2" value="Wifi" />
-                                    <label for="amen_type_2">Wifi</label>
+                                    <label htmlFor="amen_type_2">Wifi</label>
                                 </div>
                                 <div className="radio-element-amen">
                                     <input type="checkbox" id="amen_type_3" name="amen_type_3" value="Washroom" />
-                                    <label for="amen_type_3">Washroom</label>
+                                    <label htmlFor="amen_type_3">Washroom</label>
                                 </div>
                                 <div className="radio-element-amen">
                                     <input type="checkbox" id="amen_type_4" name="amen_type_4" value="Blanket" />
-                                    <label for="amen_type_4">Blanket</label>
+                                    <label htmlFor="amen_type_4">Blanket</label>
                                 </div>
                                 <div className="radio-element-amen">
                                     <input type="checkbox" id="amen_type_5" name="amen_type_5" value="Reading Light" />
-                                    <label for="amen_type_5">Reading Light</label>
+                                    <label htmlFor="amen_type_5">Reading Light</label>
                                 </div>
                                 <div className="radio-element-amen">
                                     <input type="checkbox" id="amen_type_6" name="amen_type_6" value="First Aid" />
-                                    <label for="amen_type_6">First Aid</label>
+                                    <label htmlFor="amen_type_6">First Aid</label>
                                 </div>
                                 <div className="radio-element-amen">
                                     <input type="checkbox" id="amen_type_7" name="amen_type_7" value="Fan" />
-                                    <label for="amen_type_7">Fan</label>
+                                    <label htmlFor="amen_type_7">Fan</label>
                                 </div>
                                 <div className="radio-element-amen">
                                     <input type="checkbox" id="amen_type_8" name="amen_type_8" value="Hand Sanitizer" />
-                                    <label for="amen_type_8">hand Sanitizer</label>
+                                    <label htmlFor="amen_type_8">hand Sanitizer</label>
                                 </div>
                                 <div className="radio-element-amen">
                                     <input type="checkbox" id="amen_type_9" name="amen_type_9" value="Fire Extinguisher" />
-                                    <label for="amen_type_9">Fire Extinguisher</label>
+                                    <label htmlFor="amen_type_9">Fire Extinguisher</label>
                                 </div>
                                 <div className="radio-element-amen">
                                     <input type="checkbox" id="amen_type_10" name="amen_type_10" value="Charging Point" />
-                                    <label for="amen_type_10">Charging Point</label>
+                                    <label htmlFor="amen_type_10">Charging Point</label>
                                 </div>
                                 <div className="radio-element-amen">
                                     <input type="checkbox" id="amen_type_11" name="amen_type_11" value="Newspaper" />
-                                    <label for="amen_type_11">Newspaper</label>
+                                    <label htmlFor="amen_type_11">Newspaper</label>
                                 </div>
                                 <div className="radio-element-amen">
                                     <input type="checkbox" id="amen_type_12" name="amen_type_12" value="Pillow" />
-                                    <label for="amen_type_12">Pillow</label>
+                                    <label htmlFor="amen_type_12">Pillow</label>
                                 </div>
                                 <div className="radio-element-amen">
                                     <input type="checkbox" id="amen_type_13" name="amen_type_13" value="Snacks" />
-                                    <label for="amen_type_13">Snacks</label>
+                                    <label htmlFor="amen_type_13">Snacks</label>
                                 </div>
                                 <div className="radio-element-amen">
                                     <input type="checkbox" id="amen_type_14" name="amen_type_14" value="Water Bottles" />
-                                    <label for="amen_type_14">Water Bottles</label>
+                                    <label htmlFor="amen_type_14">Water Bottles</label>
                                 </div>
                                 <div className="radio-element-amen">
                                     <input type="checkbox" id="amen_type_15" name="amen_type_15" value="No Stop" />
-                                    <label for="amen_type_15">No Stop</label>
+                                    <label htmlFor="amen_type_15">No Stop</label>
                                 </div>
                             </div>
                         </AccordionDetails>

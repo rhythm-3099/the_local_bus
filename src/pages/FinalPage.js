@@ -18,6 +18,17 @@ class FinalPage extends Component {
         return seatsInfo;
     }
 
+    getBoardingDate = () => {
+        let date = this.props.searchInfo.fromDate;
+        let dd = String(date.getDate()).padStart(2, '0');
+        let mm = String(date.getMonth() + 1).padStart(2, '0'); 
+        let yyyy = date.getFullYear();
+
+        date = dd + '/' + mm + '/' + yyyy;
+        
+        return date;
+    }
+
     getPassengerInfo = () => {
         let passengersArr = this.props.passengers;
         let seats = this.props.seats;
@@ -65,7 +76,7 @@ class FinalPage extends Component {
                                 <div className="ticket-detail-box">
                                     <h4>Boarding Date</h4>
                                     <div className="hor-line-detail-box"></div>
-                                    <p>20-11-2020</p>
+                                    <p>{this.getBoardingDate()}</p>
                                 </div>
                                 <div className="ticket-detail-box">
                                     <h4>Boarding Time</h4>
@@ -180,7 +191,8 @@ const mapStateToProps = (state) => {
         price: state.price.price,
         finalFare: state.price.finalPrice,
         seats: state.seat.seats,
-        passengers: state.passenger.passengers
+        passengers: state.passenger.passengers,
+        searchInfo: state.searchInfo.searchInfo
     }
 }
 
