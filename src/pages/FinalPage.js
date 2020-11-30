@@ -20,12 +20,13 @@ class FinalPage extends Component {
 
     getBoardingDate = () => {
         let date = this.props.searchInfo.fromDate;
+        console.log(date);
         let dd = String(date.getDate()).padStart(2, '0');
         let mm = String(date.getMonth() + 1).padStart(2, '0'); 
         let yyyy = date.getFullYear();
 
-        date = dd + '/' + mm + '/' + yyyy;
-        
+        date = mm + '/' + dd + '/' + yyyy;
+
         return date;
     }
 
