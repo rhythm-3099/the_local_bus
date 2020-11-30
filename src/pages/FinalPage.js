@@ -20,7 +20,6 @@ class FinalPage extends Component {
 
     getBoardingDate = () => {
         let date = this.props.searchInfo.fromDate;
-        console.log(date);
         let dd = String(date.getDate()).padStart(2, '0');
         let mm = String(date.getMonth() + 1).padStart(2, '0'); 
         let yyyy = date.getFullYear();
@@ -78,7 +77,7 @@ class FinalPage extends Component {
                                     <div className="ticket-detail-box">
                                         <h4>Boarding Date</h4>
                                         <div className="hor-line-detail-box"></div>
-                                        <p>{this.getBoardingDate()}</p>
+                                        <p>{this.props.searchInfo.fromDate}</p>
                                     </div>
                                     <div className="ticket-detail-box">
                                         <h4>Boarding Time</h4>

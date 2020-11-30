@@ -18,7 +18,8 @@ export default class AgentCircularMenu extends Component {
                                 display: 'flex',
                                 justifyContent: 'center',
                                 alignItems: 'center',
-                                color: '#ececec'
+                                color: '#ececec',
+                                boxShadow: '5px 10px 8px #888888'
                             }}
                         >
                             <h3

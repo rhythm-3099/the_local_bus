@@ -30,6 +30,10 @@
     padding: 3px;
 }
 
+.single-lady-home-form-field {
+    background-color: #ffffff;
+}
+
 .field label {
     margin-right: 15px;
 }

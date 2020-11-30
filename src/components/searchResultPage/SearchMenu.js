@@ -12,9 +12,11 @@ import DateTo from '../../static/images/date_to.png';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
+import { setSearchInfo } from '../../redux/actions/searchAction';
+
 class SearchMenu extends Component {
 
-    state = {from: this.props.searchInfo.from, to: this.props.searchInfo.to, onwardDate: this.props.searchInfo.fromDate, returnDate: this.props.searchInfo.toDate};
+    state = {from: this.props.searchInfo.from, to: this.props.searchInfo.to, onwardDate: this.props.searchInfo.fromDate, returnDate: this.props.searchInfo.toDate, seats: this.props.searchInfo.seats, isSingleLady: this.props.searchInfo.isSingleLady};
 
     fromChangeHandler = (e) => {
         this.setState({from: e.target.value});
@@ -30,6 +32,36 @@ class SearchMenu extends Component {
 
     toDateChangeHandler = (date) => {
         this.setState({returnDate: date});
+    }
+
+    seatsChangeHandler = (e) => {
+        this.setState({seats: parseInt(e.target.value)});
+    }
+
+    isSingleLadyChangeHandler = (e) => {
+        this.setState({isSingleLady: !this.state.isSingleLady})
+    }
+
+    modifySearchClickHandler = (e) => {
+        e.preventDefault();
+        let searchInfo = {
+            from: this.state.from,
+            to: this.state.to,
+            fromDate: this.getStringifiedDate(this.state.onwardDate),
+            toDate: this.getStringifiedDate(this.state.returnDate),
+            seats: this.state.seats,
+            isSingleLady: this.state.isSingleLady
+        }
+        this.props.setSearchInfo(searchInfo);
+    }
+
+    getStringifiedDate = (date) => {
+        let dd = String(date.getDate()).padStart(2, '0');
+        let mm = String(date.getMonth() + 1).padStart(2, '0'); 
+        let yyyy = date.getFullYear();
+
+        let newDate = mm + '/' + dd + '/' + yyyy;
+        return newDate;
     }
 
     render() {
@@ -50,7 +82,7 @@ class SearchMenu extends Component {
                         <img src={DateFrom} alt="date-from"/>
                         <label>Date</label>
                         <DatePicker 
-                            selected={this.state.onwardDate} 
+                            placeholderText={this.props.searchInfo.fromDate}
                             onChange={(date) => this.fromDateChangeHandler(date)} 
                             minDate={new Date()}
                             className="date-inputs"
@@ -60,7 +92,7 @@ class SearchMenu extends Component {
                         <img src={DateTo} alt="date-from"/>
                         <label>Return Date</label>
                         <DatePicker 
-                            selected={this.state.returnDate} 
+                            placeholderText={this.props.searchInfo.toDate}
                             onChange={(date) => this.toDateChangeHandler(date)} 
                             minDate={new Date()}
                             placeholderText="Return Date"
@@ -69,14 +101,14 @@ class SearchMenu extends Component {
                     </div>
                     <div className="search-field-container">
                         <label><img src={Seat} alt="Seat"/></label>
-                        <input defaultValue={this.props.searchInfo.seats} type="number"></input>
+                        <input defaultValue={this.props.searchInfo.seats} type="number" onChange={this.seatsChangeHandler}></input>
                     </div>
                     <div className="search-field-container">
-                        <input type="checkbox" id="single_lady" name="single_lady" value="single_lady" defaultChecked={this.props.searchInfo.isSingleLady}/>
-                        <label htmlFor="single_lady">Single Lady</label>
+                        <input type="checkbox" id="single_lady" name="single_lady" value="single_lady" defaultChecked={this.props.searchInfo.isSingleLady} onClick={this.isSingleLadyChangeHandler}/>
+                        <label htmlFor="single_lady" onClick={this.isSingleLadyChangeHandler}>Single Lady</label>
                     </div>
                     <div className="search-field-container">
-                        <div className="modify-search-button">
+                        <div className="modify-search-button" onClick={this.modifySearchClickHandler}>
                             Modify Search
                         </div>
                     </div>
@@ -92,7 +124,13 @@ const mapStateToProps = (state) => {
     }
 }
 
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setSearchInfo: (searchInfo) => dispatch(setSearchInfo(searchInfo))
+    }
+}
+
 export default connect(
     mapStateToProps,
-    null
+    mapDispatchToProps
 )(SearchMenu);

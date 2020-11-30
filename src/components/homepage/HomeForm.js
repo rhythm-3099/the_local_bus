@@ -39,13 +39,22 @@ class HomeForm extends Component {
         this.setState({seats: parseInt(e.target.value)})
     }
 
+    getStringifiedDate = (date) => {
+        let dd = String(date.getDate()).padStart(2, '0');
+        let mm = String(date.getMonth() + 1).padStart(2, '0'); 
+        let yyyy = date.getFullYear();
+
+        let newDate = mm + '/' + dd + '/' + yyyy;
+        return newDate;
+    }
+
     searchButtonCLickHandler = (e) => {
         e.preventDefault();
         let searchInfo = {
             from: this.state.from,
             to: this.state.to,
-            fromDate: this.state.onwardDate,
-            toDate: this.state.returnDate,
+            fromDate: this.getStringifiedDate(this.state.onwardDate),
+            toDate: this.getStringifiedDate(this.state.returnDate),
             seats: this.state.seats,
             isSingleLady: this.state.isSingleLady
         }
@@ -133,7 +142,7 @@ class HomeForm extends Component {
                             <input type="checkbox" id="divyang_booking" name="divyang_booking" value="divyang_booking"/>
                             <label htmlFor="divyang_booking">Divyang Booking</label><br/>
                         </div>
-                        <div className="field">
+                        <div className="field single-lady-home-form-field">
                             <input type="checkbox" id="single_lady" name="single_lady" value="single_lady" onClick={this.singleLadyClickHandler}/>
                             <label htmlFor="single_lady" onClick={this.singleLadyClickHandler}>Single Lady</label>
                         </div>            
