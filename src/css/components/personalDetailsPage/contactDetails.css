@@ -53,6 +53,7 @@
 .contact-button {
     width: 160px;
     background-image: linear-gradient(#007CC7, #9cc6dd);
+    color: #ffffff;
     border: none;
     border-radius: 10px;
     height: 50px;

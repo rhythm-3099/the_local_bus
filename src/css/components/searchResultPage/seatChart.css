@@ -1,6 +1,6 @@
 .seat-chart {
     width: 100%;
-    background-color: #ececec;
+    background-color: #F1F4F8;
 }
 
 .seat-chart-wrapper {
@@ -47,7 +47,8 @@
     justify-content: center;
     height: 45px;
     width: 200px;
-    background-color: wheat;
+    background-image: linear-gradient(#007CC7, #9cc6dd);
+    color: #ffffff;
     margin: 10px auto;
     border-radius: 4px;
     cursor: pointer;
@@ -56,7 +57,7 @@
 .dropdown-menu {
     display: flex;
     flex-direction: column;
-    background-color: thistle;
+    background-color: #CCD9F9;
     z-index: 100;
 }
 
@@ -68,6 +69,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #CCD9F9;
 }
 
 .dropdown-button:hover {
@@ -159,7 +161,7 @@
     display: flex;
     flex-direction: column;
     width: 90%;
-    background-color: #ececec;
+    background-color: #ffffff;
     margin: 20px auto;
 }
 

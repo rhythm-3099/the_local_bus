@@ -56,6 +56,8 @@
 .home-search-button {
     padding: 5px;
     background-image: linear-gradient(#007CC7, #9cc6dd);
+    color: #ffffff;
+    font-weight: bold;
     width: 75px;
     height: 30px;
     display: flex;
@@ -87,7 +89,7 @@
 .home-form-popup {
     display: none;
     padding: 5px;
-    background-color: wheat;
+    background-color: #EEFBFB;
     border-radius: 4px;
     width: 10rem;
     position: absolute;
@@ -102,7 +104,7 @@
     border-top: none;
     border-right: 7px solid transparent;
     border-left: 7px solid transparent;
-    border-bottom: 7px solid wheat;
+    border-bottom: 7px solid #EEFBFB;
 }
 
 .home-form-icon {
