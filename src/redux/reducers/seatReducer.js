@@ -14,7 +14,7 @@ const seatReducer = (state = initialState, action) => {
         case REMOVE_SEAT:
             let seatsArr = [...state.seats];
             return {
-                seats: seatsArr.filter(seat => seat!=action.payload)
+                seats: seatsArr.filter(seat => seat!==action.payload)
             }
 
         case REMOVE_ALL_SEATS:

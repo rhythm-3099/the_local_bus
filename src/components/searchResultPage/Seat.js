@@ -49,7 +49,7 @@ class Seat extends Component {
     onClickHandler = () => {
         if(this.state.seatProp === 'Available'){
             
-            if(this.state.clicks % 2 == 0) {
+            if(this.state.clicks % 2 === 0) {
                 this.props.addSeat(this.props.seatNum);
             } else {
                 this.props.removeSeat(this.props.seatNum);
