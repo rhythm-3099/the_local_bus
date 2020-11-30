@@ -1,16 +1,18 @@
 .search-menu {
     width: calc(100% - 50px);
     height: 50px;
-    background-color: #acacac;
+    background-image: linear-gradient(#007CC7, #9cc6dd);
     margin: 35px auto;
     border-radius: 4px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .search-form {
     width: 100%;
     display: flex;
     justify-content: space-between;
+    background-color: #F1F4F8;
+    border-radius: 4px;
 }
 
 .search-field-container {
@@ -18,6 +20,9 @@
     align-items: center;
     height: 50px;
     margin-left: 20px;
+    background-color: #CCD9F9;
+    border-radius: 5px;
+    padding: 0px 4px;
 }
 
 .search-field-container img {
@@ -32,6 +37,8 @@
     border: none;
     height: 30px;
     border-radius: 4px;
+    width: 100px;
+    background-color: #CCD9F9;
 }
 
 .date-inputs {
@@ -42,10 +49,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #eeeeee;
-    height: 45px;
+    background-image: linear-gradient(#007CC7, #9cc6dd);
+    height: 35px;
     padding: 0 5px;
     border-radius: 4px;
+    margin-right: 5px;
 }
 
 .modify-search-button:hover {

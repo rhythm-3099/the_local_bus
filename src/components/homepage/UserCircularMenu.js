@@ -14,10 +14,11 @@ export default class UserCircularMenu extends Component {
                                 height: 100,
                                 width: 100,
                                 borderRadius: '50%',
-                                backgroundColor: '#acacac',
+                                backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)',
                                 display: 'flex',
                                 justifyContent: 'center',
-                                alignItems: 'center'
+                                alignItems: 'center',
+                                color: '#ececec'
                             }}
                         >
                             <h3
@@ -40,7 +41,9 @@ export default class UserCircularMenu extends Component {
                             backgroundColor: '#acacac',
                             display: 'flex',
                             justifyContent: 'center',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            color: '#ececec',
+                            backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
                         <h5>Reschedule Journey</h5>
@@ -53,7 +56,9 @@ export default class UserCircularMenu extends Component {
                             backgroundColor: '#acacac',
                             display: 'flex',
                             justifyContent: 'center',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            color: '#ececec',
+                            backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
                         <h5>Refund Complaint</h5>
@@ -66,7 +71,9 @@ export default class UserCircularMenu extends Component {
                             backgroundColor: '#acacac',
                             display: 'flex',
                             justifyContent: 'center',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            color: '#ececec',
+                            backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
                         <h5>Refund Enquiry</h5>
@@ -79,7 +86,9 @@ export default class UserCircularMenu extends Component {
                             backgroundColor: '#acacac',
                             display: 'flex',
                             justifyContent: 'center',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            color: '#ececec',
+                            backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
                         <h5>Wallet</h5>
@@ -92,7 +101,9 @@ export default class UserCircularMenu extends Component {
                             backgroundColor: '#acacac',
                             display: 'flex',
                             justifyContent: 'center',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            color: '#ececec',
+                            backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
                         <h5>Waiting List Ticket Status</h5>
@@ -105,7 +116,9 @@ export default class UserCircularMenu extends Component {
                             backgroundColor: '#acacac',
                             display: 'flex',
                             justifyContent: 'center',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            color: '#ececec',
+                            backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
                         <h5>Cancel Ticket</h5>
@@ -118,7 +131,9 @@ export default class UserCircularMenu extends Component {
                             backgroundColor: '#acacac',
                             display: 'flex',
                             justifyContent: 'center',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            color: '#ececec',
+                            backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
                         <h5>Print/SMS Ticket</h5>
@@ -131,7 +146,9 @@ export default class UserCircularMenu extends Component {
                             backgroundColor: '#acacac',
                             display: 'flex',
                             justifyContent: 'center',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            color: '#ececec',
+                            backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
                         <h5>Print/SMS Ticket</h5>

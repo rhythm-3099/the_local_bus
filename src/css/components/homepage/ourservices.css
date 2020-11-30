@@ -26,6 +26,7 @@
     justify-content: space-between;
     align-items: center;
     border-radius: 4px;
+    background-image: linear-gradient(#007CC7, #9cc6dd);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
 }

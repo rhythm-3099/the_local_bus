@@ -5,7 +5,6 @@ import '../css/pages/paymentGateway.css';
 import '../css/pages/personalDetailsPage.css';
 
 import PaymentSummary from '../components/personalDetailsPage/PaymentSummary';
-import { InfoSharp } from '@material-ui/icons';
 
 class PaymentGateway extends Component {
 
@@ -51,25 +50,22 @@ class PaymentGateway extends Component {
                         <div className="personal-info-wrapper">
                             <div className="personal-info-det">
                                 <h2>Personal Information</h2>
-                                <div className="passenger-info-box">
-                                    {/* <div className="passenger">
-                                        <h4>Alice (F,20) | Seat 23</h4>
+                                <div className="passenger-info-box-wrapper">
+                                    <div className="passenger-info-box">
+                                        {this.getPassengersInfo()}
                                     </div>
-                                    <div className="div-line-info"></div>
-                                    <div className="passenger">
-                                        <h4>Bob (M,20) | Seat 22</h4>
-                                    </div> */}
-                                    {this.getPassengersInfo()}
                                 </div>
                             </div>
                             <div className="personal-info-det">
                                 <h2>Contact Details</h2>
-                                <div className="passenger-info-box-hor">
-                                    <div>
-                                        <h4>Email: {this.props.contact.email}</h4>
-                                    </div>
-                                    <div>
-                                        <h4>Mobile Number: {this.props.contact.phoneNumber}</h4>
+                                <div className="passenger-info-box-hor-wrapper">
+                                    <div className="passenger-info-box-hor">
+                                        <div>
+                                            <h4>Email: {this.props.contact.email}</h4>
+                                        </div>
+                                        <div>
+                                            <h4>Mobile Number: {this.props.contact.phoneNumber}</h4>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

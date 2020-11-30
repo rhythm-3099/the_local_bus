@@ -30,7 +30,9 @@ class PersonalInfo extends Component {
                 {/* <PersonalInfoCard passengerNum="1" seatNum="23" index={0}/>
                 <PersonalInfoCard passengerNum="2" seatNum="24" index={1}/>
                 <PersonalInfoCard passengerNum="3" seatNum="25" index={2}/> */}
-                {this.getPersonalInfoCards()}
+                <div className="personal-info-list-container">
+                    {this.getPersonalInfoCards()}
+                </div>
             </div>
         )
     }

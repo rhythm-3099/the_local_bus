@@ -14,10 +14,11 @@ export default class AgentCircularMenu extends Component {
                                 height: 100,
                                 width: 100,
                                 borderRadius: '50%',
-                                backgroundColor: '#acacac',
+                                backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)',
                                 display: 'flex',
                                 justifyContent: 'center',
-                                alignItems: 'center'
+                                alignItems: 'center',
+                                color: '#ececec'
                             }}
                         >
                             <h3
@@ -40,7 +41,9 @@ export default class AgentCircularMenu extends Component {
                             backgroundColor: '#acacac',
                             display: 'flex',
                             justifyContent: 'center',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            color: '#ececec',
+                            backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
                         <h5>Login/ Signup</h5>
@@ -53,7 +56,9 @@ export default class AgentCircularMenu extends Component {
                             backgroundColor: '#acacac',
                             display: 'flex',
                             justifyContent: 'center',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            color: '#ececec',
+                            backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
                         <h5>E Top Status</h5>
@@ -66,7 +71,9 @@ export default class AgentCircularMenu extends Component {
                             backgroundColor: '#acacac',
                             display: 'flex',
                             justifyContent: 'center',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            color: '#ececec',
+                            backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
                         <h5>Agent Allotment</h5>
@@ -79,7 +86,9 @@ export default class AgentCircularMenu extends Component {
                             backgroundColor: '#acacac',
                             display: 'flex',
                             justifyContent: 'center',
-                            alignItems: 'center'
+                            alignItems: 'center',
+                            color: '#ececec',
+                            backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
                         <h5>Agent List</h5>

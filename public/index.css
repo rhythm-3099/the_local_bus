@@ -3,4 +3,9 @@ body, html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    color: #333333
+}
+
+body {
+    background-color: #EEFBFB;
 }

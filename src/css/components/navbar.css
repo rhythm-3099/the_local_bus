@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-image: linear-gradient(#007CC7, #9cc6dd );
 }
 
 .navbar {
@@ -9,7 +10,7 @@
 }
 
 .navlink-container img {
-    background-color: white;
+    background-image: linear-gradient(#007CC7, #9cc6dd );
 }
 
 .navbar ul{
@@ -17,6 +18,7 @@
     list-style: none;
     margin: 0!important;
     padding: 0;
+    height: 100%;
 }
 
 .navbar ul li, .lang-option {
@@ -24,14 +26,16 @@
     padding: 5px;
     font-weight: 450;
     font-size: 26px;
+    height: 100%;
 }
 
 .navlink, .lang-option {
     padding: 15px;
-    color: #457B9D;
+    color: #333333;
     text-decoration: none;
     display: inline-block;
     position: relative;
+    font-weight: 500;
 }
 
 .navlink::after {
@@ -42,7 +46,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #1D3557;
+    background-color: #333333;
     transform-origin: bottom right;
     transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
 }

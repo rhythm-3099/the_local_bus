@@ -51,21 +51,23 @@ class ContactDetails extends Component {
                 <h2>Contact Details</h2>
                 <div className="contact-details-wrapper">
                     <Form className="contact-form" onSubmit={this.onFormSubmit}>
-                        <div className="contact-form-wrapper">
-                            <Form.Group controlId="formBasicEmail" className="contact-form-field">
-                                <Form.Label>
-                                    <Icon icon={atIcon} style={{color: '#9C9C9C'}} className="contact-form-icon"/>
-                                </Form.Label>
-                                <Form.Control type="email" placeholder="Enter email" className="contact-form-input" onChange={this.emailChangeHandler}/>
-                                    
-                            </Form.Group>
-
-                            <Form.Group controlId="formBasicPassword" className="contact-form-field">
+                        <div className="contact-form-wrapper-wrapper">
+                            <div className="contact-form-wrapper">
+                                <Form.Group controlId="formBasicEmail" className="contact-form-field">
                                     <Form.Label>
-                                        <Icon icon={cellphoneIcon} style={{color: '#000000'}} className="contact-form-icon"/>
+                                        <Icon icon={atIcon} style={{color: '#9C9C9C'}} className="contact-form-icon"/>
                                     </Form.Label>
-                                    <Form.Control placeholder="Contact Number" className="contact-form-input" type="number" onChange={this.phoneNumberChangeHandler}/>
-                            </Form.Group>
+                                    <Form.Control type="email" placeholder="Enter email" className="contact-form-input" onChange={this.emailChangeHandler}/>
+                                        
+                                </Form.Group>
+
+                                <Form.Group controlId="formBasicPassword" className="contact-form-field">
+                                        <Form.Label>
+                                            <Icon icon={cellphoneIcon} style={{color: '#000000'}} className="contact-form-icon"/>
+                                        </Form.Label>
+                                        <Form.Control placeholder="Contact Number" className="contact-form-input" type="number" onChange={this.phoneNumberChangeHandler}/>
+                                </Form.Group>
+                            </div>
                         </div>
                         <Button type="submit" className="contact-button" onClick={this.buttonClick}>
                             Continue

@@ -148,7 +148,6 @@ export default class SideFilter extends Component {
                             <Slider
                                 value={this.state.departureVal}
                                 onChange={this.departureChangeHandler}
-                                
                                 min={0}
                                 max={1439}
                             />

@@ -1,3 +1,8 @@
+.personal-details-page-container {
+    padding: 5px;
+    
+}
+
 .personal-info-wrapper {
     display: flex;
     flex-direction: column;
@@ -10,12 +15,18 @@
     margin: 0 auto;
 }
 
+.passenger-info-box-wrapper {
+    padding: 5px;
+    border-radius: 5px;
+    background-image: linear-gradient(#007CC7, #9cc6dd);
+}
+
 .passenger-info-box {
     display: flex;
     flex-direction: column;
     border-radius: 4px;
-    background-color: grey;
-    width: 80%;
+    background-color: #F1F4F8;
+    width: 100%;
 }
 
 .passenger-info-box h4 {
@@ -33,11 +44,17 @@
     margin: 10px auto;
 }
 
+.passenger-info-box-hor-wrapper {
+    padding: 5px;
+    border-radius: 5px;
+    background-image: linear-gradient(#007CC7, #9cc6dd);
+}
+
 .passenger-info-box-hor {
     display: flex;
-    width: 60%;
+    width: 100%;
     justify-content: space-evenly;
-    background-color: #ececec;
+    background-color: #F1F4F8;
     border-radius: 4px;
 }
 
@@ -70,4 +87,8 @@
 
 .no-cent {
     text-align: unset;
+}
+
+.personal-container-1{
+    background-color: #ffffff;
 }
