@@ -128,3 +128,42 @@
 .home-form-popup p{
     margin: 5px;
 }
+
+.home-form-error-message {
+    display: block;
+    position: absolute;
+    border-radius: 4px;
+    width: 12rem;
+    background-color: rgb(241, 204, 200);
+    z-index: 100;
+}
+
+.home-form-error-message::after {
+    content: " ";
+    position: absolute;
+    left: 10px;
+    top: -7px;
+    border-top: none;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-bottom: 7px solid rgb(241, 204, 200);
+}
+
+.home-form-error-message p {
+    margin: 5px;
+}
+
+.disabled-home-form-search {
+    padding: 5px;
+    /* background-image: linear-gradient(#007CC7, #9cc6dd); */
+    background-color: #acacac;
+    color: #333333;
+    font-weight: bold;
+    width: 75px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin: 5px auto;
+}

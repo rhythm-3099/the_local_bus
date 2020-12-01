@@ -17,14 +17,28 @@ import { setSearchInfo } from '../../redux/actions/searchAction';
 
 class HomeForm extends Component {
 
-    state = {from: '', to: '', onwardDate: new Date(), returnDate: null, seats: 0, isSingleLady: 0};
+    state = {
+        from: '',
+        to: '',
+        isFromInvalid: false,
+        isToInvalid: false,
+        onwardDate: new Date(), 
+        returnDate: null, 
+        seats: 0, 
+        isSeatsInvalid: false,
+        isSingleLady: 0
+    };
 
     fromChangeHandler = (e) => {
-        this.setState({from: e.target.value});
+        let newfrom = e.target.value.replace(/\s+/g,' ').trim();
+        this.setState({isFromInvalid: this.cityFieldValidator(e.target.value)});
+        this.setState({from: newfrom});
     }
 
     toChangeHandler = (e) => {
-        this.setState({to: e.target.value});
+        let newTo = e.target.value.replace(/\s+/g,' ').trim();
+        this.setState({isToInvalid: this.cityFieldValidator(e.target.value)});
+        this.setState({to: newTo});
     }
 
     fromDateChangeHandler = (date) => {
@@ -36,6 +50,7 @@ class HomeForm extends Component {
     }
 
     seatsChangeHandler = (e) => {
+        this.setState({isSeatsInvalid: this.seatsFieldValidator(e.target.value)})
         this.setState({seats: parseInt(e.target.value)})
     }
 
@@ -52,7 +67,7 @@ class HomeForm extends Component {
         return newDate;
     }
 
-    searchButtonCLickHandler = (e) => {
+    searchButtonClickHandler = (e) => {
         e.preventDefault();
         let searchInfo = {
             from: this.state.from,
@@ -72,6 +87,51 @@ class HomeForm extends Component {
         this.setState({isSingleLady: newVal});
     }
 
+    cityFieldValidator = (city) => {
+        console.log('city ', city);
+        if(city === '' || city === undefined || city === null){
+            return false;
+        }
+        if(/^[a-zA-Z ]+$/.test(city)) {
+            return false;
+        }
+        return true;
+    }
+
+    seatsFieldValidator = (seats) => {
+        if(seats === '' || seats === undefined || seats === null){
+            return false
+        }
+        if(/^\d+$/.test(seats) ) {
+            return false;
+        } 
+        return true;
+    }
+
+    getErrorPopUp = (err) => {
+        let errorPopUp = (
+            <div className="home-form-error-message">
+                <p>{err}</p>
+            </div>
+        )
+        return errorPopUp;
+    }
+
+    getSearchButtonClass = () => {
+        if(this.state.from !== '' 
+            && this.state.to !== '' 
+            && this.state.onwardDate !== null 
+            && this.state.seats !== 0 
+            && !this.state.isFromInvalid
+            && !this.state.isToInvalid
+            && !this.state.isSeatsInvalid
+        ) {
+            return "home-search-button";
+        } else {
+            return "disabled-home-form-search";
+        }
+    }
+
     render() {
         return (
             <div className="home-form-wrapper">
@@ -79,11 +139,11 @@ class HomeForm extends Component {
                     <div className="upper-wrapper">
                         <div className="from-field-home field">
                             <label className="home-form-popup-container">
-                                {/* <img src={From} alt="from" /> */}
                                 <Icon icon={telegramIcon} style={{color: '#61B15A'}} className="home-form-icon"/>
                                 <div className="home-form-popup">
                                     <p>Select the city from where you will board the bus</p>
                                 </div>
+                                {this.state.isFromInvalid ? this.getErrorPopUp("The city name should contain only letters.") : null}
                             </label>
                             <input onChange={this.fromChangeHandler} placeholder="From" type="text"></input>
                             
@@ -94,6 +154,7 @@ class HomeForm extends Component {
                                 <div className="home-form-popup">
                                     <p>Select the city where you want to go</p>
                                 </div>
+                                {this.state.isToInvalid ? this.getErrorPopUp("The city name should contain only letters.") : null}
                             </label>
                             <input onChange={this.toChangeHandler} placeholder="To" type="text"></input>
                         </div>
@@ -136,6 +197,7 @@ class HomeForm extends Component {
                                 <div className="home-form-popup">
                                     <p>Select the number of seats</p>
                                 </div>
+                                {this.state.isSeatsInvalid ? this.getErrorPopUp("Seat should only contain digits") : null}
                             </label>
                             <input placeholder="Seats" type="number" min="1" onChange={this.seatsChangeHandler}></input>
                         </div>
@@ -152,7 +214,10 @@ class HomeForm extends Component {
                         </div>            
                     </div>
                     <div className="upper-wrapper">
-                        <div className="home-search-button" onClick={this.searchButtonCLickHandler}>Search</div>
+                        
+                            <div className={this.getSearchButtonClass()} onClick={this.searchButtonClickHandler}>
+                                Search
+                            </div>
                     </div>
                     
                 </form>
