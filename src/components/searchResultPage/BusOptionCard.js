@@ -28,19 +28,17 @@ import Pillow from '../../static/images/pillow.png'
 
 import { removeAllSeats } from '../../redux/actions/seatAction';
 import { removeBusInfo } from '../../redux/actions/busInfoAction';
+import { removePassenger } from '../../redux/actions/passengerAction';
 
 class BusOptionCard extends Component {
 
-    state= {viewBusEnable: false};
+    state= {viewBusEnable: false, showModal: false, };
 
     viewBusClickHandler = () => {
-        this.setState({viewBusEnable: !this.state.viewBusEnable})
-    }
-
-    mouseLeftHandler = () => {
         this.props.removeAllSeats();
         this.props.removeBusInfo();
-        this.setState({viewBusEnable: false});
+        this.props.removePassenger();
+        this.setState({viewBusEnable: !this.state.viewBusEnable})
     }
 
     getSeatChart = () => {
@@ -76,7 +74,7 @@ class BusOptionCard extends Component {
 
     render() {
         return (
-            <div className="bus-card" onMouseLeave={this.mouseLeftHandler}>
+            <div className="bus-card">
                 <div className="bus-card-wrapper">
                     <div className="bus-card-section">
                         <h3>{this.props.busName}</h3>
@@ -225,14 +223,22 @@ class BusOptionCard extends Component {
     }
 }
 
+const mapStateToProps = (state) => {
+    return {
+        searchInfo: state.searchInfo.searchInfo,
+        seats: state.seat.seats
+    }
+}
+
 const mapDispatchToProps = (dispatch) => {
     return {
         removeAllSeats: () => dispatch(removeAllSeats()),
-        removeBusInfo: () => dispatch(removeBusInfo())
+        removeBusInfo: () => dispatch(removeBusInfo()),
+        removePassenger: () => dispatch(removePassenger())
     }
 }
 
 export default connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps
 )(BusOptionCard);

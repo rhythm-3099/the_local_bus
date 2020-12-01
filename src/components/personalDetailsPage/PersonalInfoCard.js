@@ -86,9 +86,9 @@ class PersonalInfoCard extends Component {
                         <h4>Gender</h4>
                         <div className="gender-buttons">
                             <input type="radio" id="male" name="gender" value="male" onClick={() => this.genderClick('male')} defaultChecked/>
-                            <label for="male" onClick={() => this.genderClick('male')}>Male</label>
+                            <label htmlFor="male" onClick={() => this.genderClick('male')}>Male</label>
                             <input type="radio" id="female" name="gender" value="female" onClick={() => this.genderClick('female')}/>
-                            <label for="female" onClick={() => this.genderClick('female')}>Female</label>
+                            <label htmlFor="female" onClick={() => this.genderClick('female')}>Female</label>
                         </div>
                     </div>
                 </form>

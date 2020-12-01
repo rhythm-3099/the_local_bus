@@ -1,1 +1,2 @@
 export const SET_PASSENGER = 'SET_PASSENGER';
+export const REMOVE_PASSENGER = 'REMOVE_PASSENGER';

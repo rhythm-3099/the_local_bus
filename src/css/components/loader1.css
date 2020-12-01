@@ -1,0 +1,16 @@
+.loader1 {
+    display: flex;
+    background-color: lavender;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.loading-wrapper1 {
+    width: 60%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

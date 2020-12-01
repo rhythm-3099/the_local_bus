@@ -1,4 +1,4 @@
-import { SET_PASSENGER } from '../types/passengerTypes';
+import { SET_PASSENGER, REMOVE_PASSENGER } from '../types/passengerTypes';
 
 const initialState = {
     passengers: []
@@ -12,6 +12,11 @@ const passengerReducer = (state = initialState, action) => {
                     // ...state.passengers,
                     action.payload
                 
+            }
+
+        case REMOVE_PASSENGER:
+            return {
+                passengers: []
             }
 
         default:
