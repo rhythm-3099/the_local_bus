@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import {Modal, Button} from 'react-bootstrap';
 
 import '../../css/components/searchResultPage/seatChart.css';
 
