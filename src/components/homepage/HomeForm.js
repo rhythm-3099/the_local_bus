@@ -78,8 +78,12 @@ class HomeForm extends Component {
             isSingleLady: this.state.isSingleLady
         }
 
-        this.props.setSearchInfo(searchInfo);
-        this.props.searchButtonClicked();
+        if(this.getSearchButtonClass() === "home-search-button") {
+            this.props.setSearchInfo(searchInfo);
+            this.props.searchButtonClicked();
+        }
+
+        
     }
 
     singleLadyClickHandler = (e) => {
