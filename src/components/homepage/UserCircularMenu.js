@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Planet } from 'react-planet';
 
 import '../../css/components/homepage/circularMenu.css';
@@ -44,6 +45,7 @@ export default class UserCircularMenu extends Component {
                             justifyContent: 'center',
                             alignItems: 'center',
                             color: '#ececec',
+                            cursor: 'pointer',
                             backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
@@ -59,10 +61,15 @@ export default class UserCircularMenu extends Component {
                             justifyContent: 'center',
                             alignItems: 'center',
                             color: '#ececec',
+                            cursor: 'pointer',
                             backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
-                        <h5>Refund Complaint</h5>
+                        <h5>
+                            <Link to="/login" style={{color: '#ffffff'}}>
+                                Login
+                            </Link>
+                        </h5>
                     </div>
                     <div
                         style={{
@@ -74,6 +81,7 @@ export default class UserCircularMenu extends Component {
                             justifyContent: 'center',
                             alignItems: 'center',
                             color: '#ececec',
+                            cursor: 'pointer',
                             backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
@@ -89,6 +97,7 @@ export default class UserCircularMenu extends Component {
                             justifyContent: 'center',
                             alignItems: 'center',
                             color: '#ececec',
+                            cursor: 'pointer',
                             backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
@@ -104,6 +113,7 @@ export default class UserCircularMenu extends Component {
                             justifyContent: 'center',
                             alignItems: 'center',
                             color: '#ececec',
+                            cursor: 'pointer',
                             backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
@@ -119,6 +129,7 @@ export default class UserCircularMenu extends Component {
                             justifyContent: 'center',
                             alignItems: 'center',
                             color: '#ececec',
+                            cursor: 'pointer',
                             backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
@@ -134,6 +145,7 @@ export default class UserCircularMenu extends Component {
                             justifyContent: 'center',
                             alignItems: 'center',
                             color: '#ececec',
+                            cursor: 'pointer',
                             backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
@@ -149,6 +161,7 @@ export default class UserCircularMenu extends Component {
                             justifyContent: 'center',
                             alignItems: 'center',
                             color: '#ececec',
+                            cursor: 'pointer',
                             backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >

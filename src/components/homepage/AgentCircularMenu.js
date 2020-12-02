@@ -44,6 +44,7 @@ export default class AgentCircularMenu extends Component {
                             justifyContent: 'center',
                             alignItems: 'center',
                             color: '#ececec',
+                            cursor: 'pointer',
                             backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
@@ -59,6 +60,7 @@ export default class AgentCircularMenu extends Component {
                             justifyContent: 'center',
                             alignItems: 'center',
                             color: '#ececec',
+                            cursor: 'pointer',
                             backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
@@ -74,6 +76,7 @@ export default class AgentCircularMenu extends Component {
                             justifyContent: 'center',
                             alignItems: 'center',
                             color: '#ececec',
+                            cursor: 'pointer',
                             backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
@@ -89,6 +92,7 @@ export default class AgentCircularMenu extends Component {
                             justifyContent: 'center',
                             alignItems: 'center',
                             color: '#ececec',
+                            cursor: 'pointer',
                             backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)'
                         }}
                     >
