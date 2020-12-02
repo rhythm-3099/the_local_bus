@@ -1,3 +1,8 @@
+.personal-details-page {
+    display: flex;
+    flex-direction: column;
+}
+
 .personal-details-page-container {
     display: flex;
 }

@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
 
 import '../css/pages/finalpage.css';
+import '../css/pages/common.css';
 
 import DataLoader from '../components/DataLoader';
 
 import { Icon } from '@iconify/react';
 import checkCircle from '@iconify/icons-mdi/check-circle';
+import homeIcon from '@iconify/icons-mdi/home';
 
 class FinalPage extends Component {
 
@@ -75,6 +77,10 @@ class FinalPage extends Component {
         return passengerInfo;
     }
 
+    goToThisNavLink = (link) => {
+        this.props.history.push(link);
+    }
+
     render() {
         if(this.state.loading) {
             return (
@@ -86,6 +92,10 @@ class FinalPage extends Component {
             return (
                 <div className="final-page">
                     <div className="final-page-wrapper">
+                        <div className="search-navigator">
+                            <Icon icon={homeIcon} style={{color: '#000000'}} className="search-navigator-icon" onClick={() => this.goToThisNavLink("/")}/>
+                            
+                        </div>
                         <div className="ticket-confirmed-wrapper">
                             <Icon icon={checkCircle} style={{color: '#27ae60'}} className="ticket-confirmed-icon"/>
                             <h1>Ticket Confirmed</h1>

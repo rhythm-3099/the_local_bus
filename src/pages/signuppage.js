@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 
 import '../css/pages/loginpage.css';
 import '../css/pages/signuppage.css';
+import '../css/pages/common.css';
 
 import {Form, Button} from 'react-bootstrap';
 import { Icon } from '@iconify/react';
+import homeIcon from '@iconify/icons-mdi/home'
 import busIcon from '@iconify/icons-mdi/bus';
 import atIcon from '@iconify/icons-mdi/at';
 import keyVariant from '@iconify/icons-mdi/key-variant';
@@ -45,9 +47,18 @@ export default class Signuppage extends Component {
         this.props.history.push('/login')
     }
 
+    goToThisNavLink = (link) => {
+        this.props.history.push(link);
+    }
+
     render() {
         return (
             <div>
+                <div className="search-navigator">
+                    <Icon icon={homeIcon} style={{color: '#000000'}} className="search-navigator-icon" onClick={() => this.goToThisNavLink("/")}/>
+                    <span className="search-navigator-divider">/</span>
+                    <span className="search-navigator-text search-navigator-last-text">Register</span>
+                </div>
                 <div className="login-option-wrapper">
                     <div 
                         className="login-option" 

@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 
 import '../css/pages/paymentGateway.css';
 import '../css/pages/personalDetailsPage.css';
+import '../css/pages/common.css';
+
+import { Icon } from '@iconify/react';
+import homeIcon from '@iconify/icons-mdi/home';
 
 import PaymentSummary from '../components/personalDetailsPage/PaymentSummary';
 
@@ -42,12 +46,25 @@ class PaymentGateway extends Component {
         return info;
     }
 
+    goToThisNavLink = (link) => {
+        this.props.history.push(link);
+    }
+
     render() {
         return (
             <div>
                 <div className="personal-details-page-container">
                     <div className="personal-container-1 no-cent">
                         <div className="personal-info-wrapper">
+                            <div className="search-navigator">
+                                <Icon icon={homeIcon} style={{color: '#000000'}} className="search-navigator-icon" onClick={() => this.goToThisNavLink("/")}/>
+                                <span className="search-navigator-divider">/</span>
+                                <span className="search-navigator-text" onClick={() => this.goToThisNavLink("/search")}>Search Bus</span>
+                                <span className="search-navigator-divider">/</span>
+                                <span className="search-navigator-text" onClick={() => this.goToThisNavLink("/details")}>Details</span>
+                                <span className="search-navigator-divider">/</span>
+                                <span className="search-navigator-text search-navigator-last-text">Payment</span>
+                            </div>
                             <div className="personal-info-det">
                                 <h2>Personal Information</h2>
                                 <div className="passenger-info-box-wrapper">

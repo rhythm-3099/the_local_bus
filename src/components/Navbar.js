@@ -17,7 +17,7 @@ export default function Navbar() {
                         <NavLink to="/login" exact className="navlink" activeClassName="active-navlink">Login</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/signup" exact className="navlink" activeClassName="active-navlink">Sign Up</NavLink>
+                        <NavLink to="/signup" exact className="navlink" activeClassName="active-navlink">Register</NavLink>
                     </li>
                     <li>
                         <NavLink to="/help" exact className="navlink" activeClassName="active-navlink">Help</NavLink>
