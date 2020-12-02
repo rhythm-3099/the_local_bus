@@ -1,0 +1,16 @@
+.helppage {
+    width: 100%;
+}
+
+.helppage-wrapper {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.help-accordion {
+    margin: 10px 0px;
+    background-color: #F1F4F8 !important;
+    border-radius: 4px;
+}
