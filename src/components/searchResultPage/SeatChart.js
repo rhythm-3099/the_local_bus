@@ -46,49 +46,19 @@ class SeatChart extends Component {
         return statement;
     }
 
-    // handleCloseModal() {
-	// 	this.setState({ showModal: false });
-    // }
-    
-    // showModalHandler = () => {
-    //     if(this.props.seatsArr.length === this.props.searchInfo.seats){
-    //         this.setState({showModal: false})
-    //     } else {
-    //         this.setState({showModal: true})
-    //     }
-    // }
-
-    // getModal = () => {
-    //     let modal = null; 
-    //     //this.showModalHandler();
-    //     modal = (
-    //         <Modal show={true} onHide={this.handleCloseModal}>
-	// 			<Modal.Header closeButton>
-	// 				<Modal.Title>Modal heading</Modal.Title>
-	// 			</Modal.Header>
-	// 			<Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-	// 			<Modal.Footer>
-	// 				<Button variant="secondary" onClick={this.handleCloseModal}>
-    //                     Close
-    //                 </Button>
-	// 				<Button variant="primary" onClick={this.handleCloseModal}>
-	// 					Save Changes
-    //                 </Button>
-	// 			</Modal.Footer>
-	// 		</Modal>
-    //     )
-    //     return modal;
-    // }
-
     onContinueClick = () => {
         let busData = {
             ...this.props.busInfo,
             boardingPoint: this.state.boardingPoint,
             droppingPoint: this.state.droppingPoint
         };
-        //this.showModalHandler();
         this.props.setBusInfo(busData);
         this.props.setPrice(this.props.price);
+    }
+
+    isOneSeatSelected = () => {
+        let seats = this.props.seatsArr.length;
+        return seats >= 1;
     }
 
     render() {
@@ -316,10 +286,17 @@ class SeatChart extends Component {
                             </div>
                         </div>
                         <div className="hor-div-line"></div>
-                        {/* {this.getModal()} */}
-                        <Link to="/details" className="seat-continue-button" onClick={this.onContinueClick}>
-                            Continue
-                        </Link>
+                        { this.isOneSeatSelected() ? (
+                                <Link to="/details" className="seat-continue-button" onClick={this.onContinueClick}>
+                                    Continue
+                                </Link>
+                            ) : (
+                                <div className="disabled-seat-chart-button">
+                                    Continue
+                                </div>
+                            )
+                        }
+                        
                     </div>
                 </div>
             </div>

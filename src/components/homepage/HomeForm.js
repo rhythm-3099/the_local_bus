@@ -24,7 +24,7 @@ class HomeForm extends Component {
         isToInvalid: false,
         onwardDate: new Date(), 
         returnDate: null, 
-        seats: 0, 
+        seats: '', 
         isSeatsInvalid: false,
         isSingleLady: 0
     };
@@ -50,8 +50,9 @@ class HomeForm extends Component {
     }
 
     seatsChangeHandler = (e) => {
+        console.log(e.target.value);
         this.setState({isSeatsInvalid: this.seatsFieldValidator(e.target.value)})
-        this.setState({seats: parseInt(e.target.value)})
+        this.setState({seats: e.target.value})
     }
 
     getStringifiedDate = (date) => {
@@ -74,7 +75,7 @@ class HomeForm extends Component {
             to: this.state.to,
             fromDate: this.getStringifiedDate(this.state.onwardDate),
             toDate: this.getStringifiedDate(this.state.returnDate),
-            seats: this.state.seats,
+            seats: parseInt(this.state.seats),
             isSingleLady: this.state.isSingleLady
         }
 
@@ -82,8 +83,6 @@ class HomeForm extends Component {
             this.props.setSearchInfo(searchInfo);
             this.props.searchButtonClicked();
         }
-
-        
     }
 
     singleLadyClickHandler = (e) => {
@@ -92,19 +91,20 @@ class HomeForm extends Component {
     }
 
     cityFieldValidator = (city) => {
-        console.log('city ', city);
+        //console.log('city ', city);
         if(city === '' || city === undefined || city === null){
             return false;
         }
-        if(/^[a-zA-Z ]+$/.test(city)) {
+        if(/^[a-zA-Z0-9 ]+$/.test(city)) {
             return false;
         }
         return true;
     }
 
     seatsFieldValidator = (seats) => {
+        console.log('seats ', seats);
         if(seats === '' || seats === undefined || seats === null){
-            return false
+            return false;
         }
         if(/^\d+$/.test(seats) ) {
             return false;
@@ -125,7 +125,7 @@ class HomeForm extends Component {
         if(this.state.from !== '' 
             && this.state.to !== '' 
             && this.state.onwardDate !== null 
-            && this.state.seats !== 0 
+            && this.state.seats !== ''
             && !this.state.isFromInvalid
             && !this.state.isToInvalid
             && !this.state.isSeatsInvalid
@@ -147,7 +147,7 @@ class HomeForm extends Component {
                                 <div className="home-form-popup">
                                     <p>Select the city from where you will board the bus</p>
                                 </div>
-                                {this.state.isFromInvalid ? this.getErrorPopUp("The city name should contain only letters.") : null}
+                                {this.state.isFromInvalid ? this.getErrorPopUp("The city name should contain only letters, digits and spaces.") : null}
                             </label>
                             <input onChange={this.fromChangeHandler} placeholder="From" type="text"></input>
                             
@@ -158,7 +158,7 @@ class HomeForm extends Component {
                                 <div className="home-form-popup">
                                     <p>Select the city where you want to go</p>
                                 </div>
-                                {this.state.isToInvalid ? this.getErrorPopUp("The city name should contain only letters.") : null}
+                                {this.state.isToInvalid ? this.getErrorPopUp("The city name should contain only letters, digits and spaces.") : null}
                             </label>
                             <input onChange={this.toChangeHandler} placeholder="To" type="text"></input>
                         </div>
@@ -203,7 +203,7 @@ class HomeForm extends Component {
                                 </div>
                                 {this.state.isSeatsInvalid ? this.getErrorPopUp("Seat should only contain digits") : null}
                             </label>
-                            <input placeholder="Seats" type="number" min="1" onChange={this.seatsChangeHandler}></input>
+                            <input placeholder="Seats" onChange={this.seatsChangeHandler}></input>
                         </div>
                         
                         <div className="booking_buttons">

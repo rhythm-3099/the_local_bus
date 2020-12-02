@@ -3,11 +3,13 @@ import { connect } from 'react-redux';
 
 import '../../css/components/searchResultPage/searchMenu.css';
 
-import Seat from '../../static/images/seat.png';
-import From from '../../static/images/from.png';
-import To from '../../static/images/to.png';
-import DateFrom from '../../static/images/date_from.png';
-import DateTo from '../../static/images/date_to.png';
+import { Icon } from '@iconify/react';
+import telegramIcon from '@iconify/icons-mdi/telegram';
+import mapMarker from '@iconify/icons-mdi/map-marker';
+import calendarStart from '@iconify/icons-mdi/calendar-start';
+import calendarEnd from '@iconify/icons-mdi/calendar-end';
+import seatOutline from '@iconify/icons-mdi/seat-outline';
+
 
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
@@ -91,17 +93,17 @@ class SearchMenu extends Component {
             <div className="search-menu">
                 <form className="search-form">
                     <div className="search-field-container">
-                        <img src={From} alt="from"/>
+                        <Icon icon={telegramIcon} style={{color: '#61B15A'}} className="home-form-icon"/>
                         <label>From</label>
                         <input type="text" onChange={this.fromChangeHandler} defaultValue={this.props.searchInfo.from}/>
                     </div>
                     <div className="search-field-container">
-                        <img src={To} alt="to"/>
+                        <Icon icon={mapMarker} style={{color: '#C75643'}} className="home-form-icon"/>
                         <label>To</label>
                         <input type="text" onChange={this.toChangeHandler} defaultValue={this.props.searchInfo.to}/>
                     </div>
                     <div className="search-field-container">
-                        <img src={DateFrom} alt="date-from"/>
+                        <Icon icon={calendarStart} style={{color: '#000000'}} className="home-form-icon"/>
                         <label>Date</label>
                         <DatePicker 
                             selected={this.makeDateObject(this.props.searchInfo.fromDate)}
@@ -111,7 +113,7 @@ class SearchMenu extends Component {
                         />
                     </div>
                     <div className="search-field-container">
-                        <img src={DateTo} alt="date-from"/>
+                        <Icon icon={calendarEnd} style={{color: '#000000'}} className="home-form-icon"/>
                         <label>Return Date</label>
                         <DatePicker 
                             selected={this.makeDateObject(this.props.searchInfo.toDate)}
@@ -122,7 +124,7 @@ class SearchMenu extends Component {
                         />
                     </div>
                     <div className="search-field-container">
-                        <label><img src={Seat} alt="Seat"/></label>
+                        <label><Icon icon={seatOutline} style={{color: '#000000'}} className="home-form-icon"/></label>
                         <input defaultValue={this.props.searchInfo.seats} type="number" onChange={this.seatsChangeHandler}></input>
                     </div>
                     <div className="search-field-container single-lady-field-container">

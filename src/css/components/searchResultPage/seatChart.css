@@ -55,6 +55,19 @@
     cursor: pointer;
 }
 
+.disabled-seat-chart-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 200px;
+    background-color: #acacac;
+    color: #333333;
+    margin: 10px auto;
+    border-radius: 4px;
+    border: none;
+}
+
 .dropdown-menu {
     display: flex;
     flex-direction: column;
