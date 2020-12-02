@@ -17,14 +17,11 @@ export default function Navbar() {
                         <NavLink to="/login" exact className="navlink" activeClassName="active-navlink">Login</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/help" exact className="navlink" activeClassName="active-navlink">Help</NavLink>
-                    </li>
-                    {/* <li>
-                        <NavLink to="/payment" exact className="navlink" activeClassName="active-navlink">Gateway</NavLink>
+                        <NavLink to="/signup" exact className="navlink" activeClassName="active-navlink">Sign Up</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/final" exact className="navlink" activeClassName="active-navlink">Final</NavLink>
-                    </li> */}
+                        <NavLink to="/help" exact className="navlink" activeClassName="active-navlink">Help</NavLink>
+                    </li>
                 </ul>
             </div>
             <div className="lang-option">

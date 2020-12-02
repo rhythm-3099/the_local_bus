@@ -11,6 +11,7 @@ import Helppage from './pages/Helppage';
 import PersonalDetailsPage from './pages/PersonalDetailsPage';
 import FinalPage from './pages/FinalPage';
 import PaymentGateway from './pages/PaymentGateway';
+import Signuppage from './pages/signuppage';
 export default class App extends Component {
     render() {
         return (
@@ -22,6 +23,7 @@ export default class App extends Component {
                         
                         <Route path="/" exact component={Homepage}/>
                         <Route path="/login/" component={Loginpage}/>
+                        <Route path="/signup/" component={Signuppage} />
                         <Route path="/search/" component={SearchResultPage}/>
                         <Route path="/help/" component={Helppage} />
                         <Route path="/details/" component={PersonalDetailsPage} />

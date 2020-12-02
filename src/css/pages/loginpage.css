@@ -13,10 +13,6 @@
     cursor: pointer;
 }
 
-/* .login-option h2 {
-    color: #555555;
-} */
-
 .form-wrapper {
     margin: 0 auto;
     width: 45%;
@@ -116,3 +112,39 @@
     right: 62px;
 }
 
+.o-auth-login-buttons {
+    width: 50%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-or {
+    text-align: center;
+    margin: 15px 0px;
+}
+
+.o-auth-login {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 220px;
+    padding: 15px 5px;
+    border-radius: 10px;
+    background-color: #ececec;
+}
+
+.o-auth-login:hover {
+    cursor: pointer;
+    box-shadow: 2px 4px 4px #888888;
+}
+
+.o-auth-login p {
+    margin: 5px;
+    font-weight: bold;
+}
+
+.o-auth-icon {
+    width: 30px;
+    height: 30px;
+}
