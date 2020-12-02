@@ -7,10 +7,23 @@ import { Icon } from '@iconify/react';
 import busIcon from '@iconify/icons-mdi/bus';
 import atIcon from '@iconify/icons-mdi/at';
 import keyVariant from '@iconify/icons-mdi/key-variant';
+import googleIcon from '@iconify/icons-mdi/google';
+import facebookIcon from '@iconify/icons-mdi/facebook';
+import phoneIcon from '@iconify/icons-mdi/phone';
 
 
 export default class Loginpage extends Component {
     state = {currectLogin: 'User'}
+
+    onLoginButtonClick = (e) => {
+        e.preventDefault();
+        this.props.history.push('/');
+    }
+
+    onSignUpButtonClick = (e) => {
+        e.preventDefault();
+        this.props.history.push('/signup');
+    }
 
     categoryClickHandler = (category) => {
         console.log(this.state.currectLogin);
@@ -68,11 +81,11 @@ export default class Loginpage extends Component {
                         style={ this.state.currectLogin === 'Staff' ? {
                             backgroundImage: 'linear-gradient(#007CC7, #9cc6dd)',
                             color: '#ffffff'
-                        } : {
-                            backgroundColor: '#F1F4F8',
-                            color: '#555555'
+                            } : {
+                                backgroundColor: '#F1F4F8',
+                                color: '#555555'
+                            }
                         }
-                    }
                     >
                         <h2>Staff</h2>
                     </div>
@@ -97,14 +110,30 @@ export default class Loginpage extends Component {
                             <Form.Control type="password" placeholder="Password" className="login-form-input"/>
                         </Form.Group>
                         <div className="login-button-wrapper">
-                            <Button variant="primary" type="submit" className="login-button">
+                            <Button variant="primary" type="submit" className="login-button" onClick={this.onLoginButtonClick}>
                                 Login
                             </Button>
-                            <Button variant="primary" type="submit" className="signup-button">
+                            <Button variant="primary" type="submit" className="signup-button" onClick={this.onSignUpButtonClick}>
                                 Create a new account
                             </Button>
                         </div>
                     </Form>
+                </div>
+
+                <h1 className="login-or">Or</h1>
+                <div className="o-auth-login-buttons">
+                    <div className="o-auth-login">
+                        <Icon icon={googleIcon} style={{color: '#669CF6'}} className="o-auth-icon"/>
+                        <p>Log in using Google</p>
+                    </div>
+                    <div className="o-auth-login">
+                        <Icon icon={facebookIcon} style={{color: '#3b5998'}} className="o-auth-icon"/>
+                        <p>Log in using Facebook</p>
+                    </div>
+                    <div className="o-auth-login">
+                        <Icon icon={phoneIcon} style={{color: '#25D366'}} className="o-auth-icon"/>
+                        <p>Log in using OTP</p>
+                    </div>
                 </div>
             </div>
         )
