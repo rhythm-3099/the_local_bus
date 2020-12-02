@@ -106,3 +106,7 @@
 .passenger-age-error-popup p {
     margin: 5px;
 }
+
+.gender-buttons input, .gender-buttons label {
+    cursor: pointer;
+}

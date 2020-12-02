@@ -15,6 +15,14 @@
     margin: 0 auto;
 }
 
+.personal-info-det-planet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 200px auto;
+}
+
 .passenger-info-box-wrapper {
     padding: 5px;
     border-radius: 5px;

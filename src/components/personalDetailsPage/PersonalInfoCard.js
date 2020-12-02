@@ -18,7 +18,6 @@ class PersonalInfoCard extends Component {
     }
 
     componentDidMount = () => {
-        console.log('component did mount!');
         let passengerArr = [...this.props.passengers];
         let passenger = {
             name: this.state.name,
@@ -91,6 +90,7 @@ class PersonalInfoCard extends Component {
     }
 
     render() {
+
         return (
             <div className="personal-info-card">
                 
@@ -113,10 +113,10 @@ class PersonalInfoCard extends Component {
                     <div className="personal-gender-form">
                         <h4>Gender</h4>
                         <div className="gender-buttons">
-                            <input type="radio" id="male" name="gender" value="male" onClick={() => this.genderClick('male')} defaultChecked/>
-                            <label htmlFor="male" onClick={() => this.genderClick('male')}>Male</label>
-                            <input type="radio" id="female" name="gender" value="female" onClick={() => this.genderClick('female')}/>
-                            <label htmlFor="female" onClick={() => this.genderClick('female')}>Female</label>
+                            <input type="radio" id={`male_${this.props.seatNum}`} name="gender" value="male" onClick={() => this.genderClick('male')} defaultChecked/>
+                            <label htmlFor={`male_${this.props.seatNum}`}  onClick={() => this.genderClick('male')}>Male</label>
+                            <input type="radio" id={`female_${this.props.seatNum}`} name="gender" value="female" onClick={() => this.genderClick('female')}/>
+                            <label htmlFor={`female_${this.props.seatNum}`} onClick={() => this.genderClick('female')}>Female</label>
                         </div>
                     </div>
                 </form>

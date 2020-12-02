@@ -168,3 +168,7 @@
     border-radius: 4px;
     margin: 5px auto;
 }
+
+.booking_buttons input, .booking_buttons label, .single-lady-home-form-field input, .single-lady-home-form-field label {
+    cursor: pointer;
+}
