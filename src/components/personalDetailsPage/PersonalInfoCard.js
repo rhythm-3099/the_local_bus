@@ -11,17 +11,20 @@ import { setPassenger } from '../../redux/actions/passengerAction';
 class PersonalInfoCard extends Component {
 
     state = {
-        name: 'Name',
-        age: 0,
-        gender: 'Male'
+        name: '',
+        age: '',
+        gender: 'Male',
+        isAgeInvalid: false
     }
 
     componentDidMount = () => {
+        console.log('component did mount!');
         let passengerArr = [...this.props.passengers];
         let passenger = {
             name: this.state.name,
-            age: this.state.age,
-            gender: this.state.gender
+            age: 0,
+            gender: this.state.gender,
+            isAgeInvalid: this.state.isAgeInvalid
         }
         passengerArr[this.props.index] = passenger;
         this.props.setPassenger(passengerArr);
@@ -31,8 +34,9 @@ class PersonalInfoCard extends Component {
         let passengerArr = [...this.props.passengers];
         let passenger = {
             name: this.state.name,
-            age: this.state.age,
-            gender: gender
+            age: parseInt(this.state.age),
+            gender: gender,
+            isAgeInvalid: this.state.isAgeInvalid
         }
         passengerArr[this.props.index] = passenger;
         this.props.setPassenger(passengerArr);
@@ -43,8 +47,9 @@ class PersonalInfoCard extends Component {
         let passengerArr = [...this.props.passengers];
         let passenger = {
             name: e.target.value,
-            age: this.state.age,
-            gender: this.state.gender
+            age: parseInt(this.state.age),
+            gender: this.state.gender,
+            isAgeInvalid: this.ageFieldValidator(this.state.age)
         }
         passengerArr[this.props.index] = passenger;
         this.props.setPassenger(passengerArr);
@@ -56,11 +61,33 @@ class PersonalInfoCard extends Component {
         let passenger = {
             name: this.state.name,
             age: parseInt(e.target.value),
-            gender: this.state.gender
+            gender: this.state.gender,
+            isAgeInvalid: this.ageFieldValidator(e.target.value)
         }
         passengerArr[this.props.index] = passenger;
         this.props.setPassenger(passengerArr);
-        this.setState({age: parseInt(e.target.value)})
+        this.setState({isAgeInvalid: this.ageFieldValidator(e.target.value)});
+        this.setState({age: e.target.value});
+    }
+
+    ageFieldValidator = (age) => {
+        if(age === '')
+            return true;
+        if(age === '' || age === undefined || age === null){
+            return false;
+        }
+        if(/^\d+$/.test(age) ) {
+            return false;
+        } 
+        return true;
+    }
+
+    getErrorPopup = (err) => {
+        return (
+            <div className="passenger-age-error-popup">
+                <p>{err}</p>
+            </div>
+        )
     }
 
     render() {
@@ -79,8 +106,9 @@ class PersonalInfoCard extends Component {
                             <input type="text" onChange={this.nameChangeHandler} placeholder="Name" name="name"/>
                         </div>
                         <div className="personal-text-field">
-                            <input type="number" onChange={this.ageChangeHandler} placeholder="Age" name="age"/>
+                            <input onChange={this.ageChangeHandler} placeholder="Age" name="age"/>
                         </div>
+                        {this.state.isAgeInvalid ? this.getErrorPopup("Age should contain only digits.") : null}
                     </div>
                     <div className="personal-gender-form">
                         <h4>Gender</h4>

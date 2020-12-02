@@ -136,6 +136,7 @@
     width: 12rem;
     background-color: rgb(241, 204, 200);
     z-index: 100;
+    color: red;
 }
 
 .home-form-error-message::after {

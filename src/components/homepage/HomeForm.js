@@ -50,7 +50,6 @@ class HomeForm extends Component {
     }
 
     seatsChangeHandler = (e) => {
-        console.log(e.target.value);
         this.setState({isSeatsInvalid: this.seatsFieldValidator(e.target.value)})
         this.setState({seats: e.target.value})
     }
@@ -91,7 +90,6 @@ class HomeForm extends Component {
     }
 
     cityFieldValidator = (city) => {
-        //console.log('city ', city);
         if(city === '' || city === undefined || city === null){
             return false;
         }
@@ -102,7 +100,6 @@ class HomeForm extends Component {
     }
 
     seatsFieldValidator = (seats) => {
-        console.log('seats ', seats);
         if(seats === '' || seats === undefined || seats === null){
             return false;
         }
