@@ -21,7 +21,7 @@
 .form {
     text-align: center;
     position: relative;
-    background-color: #F1F4F8;
+    background-color: #dae4ec;
     border: 8px solid rgb(92, 90, 189);
     border-top: none;
     border-left: none;
@@ -97,7 +97,7 @@
     border-top: none;
     border-right: 30px solid transparent;
     border-left: 30px solid transparent;
-    border-bottom:  30px solid #F1F4F8;
+    border-bottom:  30px solid #dae4ec;
 }
 
 .login-indicator-left:after {
@@ -132,11 +132,12 @@
     padding: 15px 5px;
     border-radius: 10px;
     background-color: #ececec;
+    box-shadow: 2px 4px 4px #888888;
 }
 
 .o-auth-login:hover {
     cursor: pointer;
-    box-shadow: 2px 4px 4px #888888;
+    
 }
 
 .o-auth-login p {

@@ -35,6 +35,15 @@ export default class Signuppage extends Component {
         return arrows;
     }
 
+    signUpButtonClick = (e) => {
+        e.preventDefault();
+        this.props.history.push('/')
+    }
+
+    loginButtonClick = (e) => {
+        e.preventDefault();
+        this.props.history.push('/login')
+    }
 
     render() {
         return (
@@ -119,8 +128,11 @@ export default class Signuppage extends Component {
                         </div>
 
                         <div className="login-button-wrapper">
-                            <Button variant="primary" type="submit" className="login-button">
+                            <Button variant="primary" type="submit" className="login-button" onClick={this.signUpButtonClick}>
                                 Register
+                            </Button>
+                            <Button variant="primary" type="submit" className="signup-button" onClick={this.loginButtonClick}>
+                                Already have an account?
                             </Button>
                         </div>
                     </Form>

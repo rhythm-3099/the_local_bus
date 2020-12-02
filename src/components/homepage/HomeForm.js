@@ -100,6 +100,10 @@ class HomeForm extends Component {
     }
 
     seatsFieldValidator = (seats) => {
+
+        if(seats.length === 1 && seats === '0') {
+            return true;
+        }
         if(seats === '' || seats === undefined || seats === null){
             return false;
         }
@@ -198,7 +202,7 @@ class HomeForm extends Component {
                                 <div className="home-form-popup">
                                     <p>Select the number of seats</p>
                                 </div>
-                                {this.state.isSeatsInvalid ? this.getErrorPopUp("Seat should only contain digits") : null}
+                                {this.state.isSeatsInvalid ? this.getErrorPopUp("Seat should only contain digits (minimum value 1)") : null}
                             </label>
                             <input placeholder="Seats" onChange={this.seatsChangeHandler}></input>
                         </div>
