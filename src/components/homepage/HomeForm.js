@@ -149,6 +149,7 @@ class HomeForm extends Component {
                                     <p>Select the city from where you will board the bus</p>
                                 </div>
                                 {this.state.isFromInvalid ? this.getErrorPopUp("The city name should contain only letters, digits and spaces.") : null}
+                                <div className="compulsory-asterisk">*</div>
                             </label>
                             <input onChange={this.fromChangeHandler} placeholder="From" type="text"></input>
                             
@@ -160,6 +161,7 @@ class HomeForm extends Component {
                                     <p>Select the city where you want to go</p>
                                 </div>
                                 {this.state.isToInvalid ? this.getErrorPopUp("The city name should contain only letters, digits and spaces.") : null}
+                                <div className="compulsory-asterisk">*</div>
                             </label>
                             <input onChange={this.toChangeHandler} placeholder="To" type="text"></input>
                         </div>
@@ -171,6 +173,7 @@ class HomeForm extends Component {
                                 <div className="home-form-popup">
                                     <p>Select the departure date</p>
                                 </div>
+                                <div className="compulsory-asterisk">*</div>
                             </label>
                             <DatePicker 
                                 selected={this.state.onwardDate} 
@@ -192,7 +195,7 @@ class HomeForm extends Component {
                                 minDate={this.state.onwardDate}
                                 placeholderText="Select the return date"
                             />
-                            <p className="asterisk-alert">* Optional</p>
+                            {/* <p className="asterisk-alert">* Optional</p> */}
                         </div>
                     </div>
                     <div className="upper-wrapper">
@@ -202,6 +205,7 @@ class HomeForm extends Component {
                                 <div className="home-form-popup">
                                     <p>Select the number of seats</p>
                                 </div>
+                                <div className="compulsory-asterisk">*</div>
                                 {this.state.isSeatsInvalid ? this.getErrorPopUp("Seat should only contain digits (minimum value 1)") : null}
                             </label>
                             <input placeholder="Seats" onChange={this.seatsChangeHandler}></input>

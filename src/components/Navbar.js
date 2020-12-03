@@ -35,10 +35,7 @@ export default class Navbar extends Component {
                 <div className="lang-option">
                     <span className="lang-option-val">Eng</span>
                     <Switch
-                        color="primary"
-                        defaultChecked={false}
-                        checked={this.state.checked}
-                        onClick={this.onClicked}
+                        
                     />
                     <span className="lang-option-val">Guj</span>
                 </div>

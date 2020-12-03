@@ -91,6 +91,12 @@
     position: relative;
 }
 
+.compulsory-asterisk {
+    position: absolute;
+    top: -12px;
+    left: 220px;
+}
+
 .home-form-popup {
     display: none;
     padding: 5px;
