@@ -38,6 +38,13 @@
     font-weight: 500;
 }
 
+.lang-option {
+    display: flex;
+    align-items: center;
+}
+
+
+
 .navlink::after {
     content: '';
     position: absolute;

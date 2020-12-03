@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Switch from '@material-ui/core/Switch';
 
 import '../css/components/navbar.css';
 
@@ -25,7 +26,11 @@ export default function Navbar() {
                 </ul>
             </div>
             <div className="lang-option">
-                Eng/Guj
+                <span className="lang-option-val">Eng</span>
+                <Switch
+                    color="primary"
+                />
+                <span className="lang-option-val">Guj</span>
             </div>
         </div>
     )

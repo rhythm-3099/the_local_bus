@@ -32,7 +32,7 @@ class SeatUpper extends Component {
     };
 
     ladiesStyle = {
-        color: '#E3FF37',
+        color: '#F964C6',
         height: '30px',
         width: '30px'
     };
