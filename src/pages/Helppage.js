@@ -330,10 +330,10 @@ export default class Helppage extends Component {
                                 </p>
                                 <ul>
                                     <li>
-                                        GSRTC facilitates discounts of 10% on return journey and 5% for group booking (>= 4 Seats) for tickets booked before 6 hours prior to departure of service from the origin place.
+                                        GSRTC facilitates discounts of 10% on return journey and 5% for group booking greater than or equal to 4 for tickets booked before 6 hours prior to departure of service from the origin place.
                                     </li>
                                     <li>
-                                        8% discount on Express, Gurjarnagri & Non AC Sleeper & Seaters. 10% discount on Volvo & AC Sleeper & Seater booking for all e & M Booking transactions (from 01/07/2019 onwards).
+                                        8% discount on Express, Gurjarnagri  Non AC Sleeper  Seaters. 10% discount on Volvo  AC Sleeper  Seater booking for all e  M Booking transactions (from 01/07/2019 onwards).
                                     </li>
                                     <li>
                                         <b>
