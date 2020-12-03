@@ -26,7 +26,7 @@ class FinalPage extends Component {
     };
 
     componentDidMount() {
-        this.wait(25000);
+        this.wait(2500);
     }
 
     homepageButtonClickHandler = () => {
