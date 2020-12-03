@@ -7,11 +7,11 @@ import '../css/components/navbar.css';
 import logo from '../static/images/logo.png';
 
 export default class Navbar extends Component {
-    // state = {checked: true}
+    state = {checked: false}
 
-    // onClicked = () => {
-    //     this.setState({checked: !this.state.checked})
-    // }
+    onClicked = () => {
+        this.setState({checked: !this.state.checked})
+    }
     
     render() {
         return (
@@ -37,8 +37,8 @@ export default class Navbar extends Component {
                     <Switch
                         color="primary"
                         defaultChecked={false}
-                        // checked={this.state.checked}
-                        // onClick={this.onClicked}
+                        checked={this.state.checked}
+                        onClick={this.onClicked}
                     />
                     <span className="lang-option-val">Guj</span>
                 </div>
