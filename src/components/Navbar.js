@@ -33,11 +33,16 @@ export default class Navbar extends Component {
                     </ul>
                 </div>
                 <div className="lang-option">
-                    <span className="lang-option-val">Eng</span>
-                    <Switch
-                        
-                    />
-                    <span className="lang-option-val">Guj</span>
+                    <div className="toll-free">
+                        <h5>Toll-free Number: 1800 233 666666 / 079 2283 5000</h5>
+                    </div>
+                    <div className="lang-option-div">
+                        <span className="lang-option-val">Eng</span>
+                        <Switch
+                            
+                        />
+                        <span className="lang-option-val">Guj</span>
+                    </div>
                 </div>
             </div>
         )
